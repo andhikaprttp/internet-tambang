@@ -125,6 +125,7 @@
     </style>
     <noscript><style>.clip-text{transform:none}.hero-fade-in,.intro-desc{opacity:1}</style></noscript>
 </head>
+
 <body class="antialiased selection:bg-accent selection:text-white">
 
     <!-- Custom Cursor Elements -->
@@ -168,17 +169,17 @@
         <a href="#contact" class="menu-link mt-6 w-full text-center bg-accent text-white px-6 py-4 font-bold uppercase tracking-wider" data-i18n="nav.contact">Contact</a>
         <div class="lang-switch mt-4 flex items-center gap-2 text-xs tracking-widest-xl"><button type="button" class="lang-btn" data-lang="id" aria-label="Bahasa Indonesia">ID</button><span>/</span><button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button></div>
     </div>
-
-    <!-- 02. HERO SECTION -->
+<!-- 02. HERO SECTION -->
     <section id="hero" class="relative h-[100svh] md:h-screen w-full flex flex-col justify-end pb-12 px-6 md:px-12 overflow-hidden bg-dark">
-        <!-- Background Video -->
-        <div class="absolute inset-0 z-0 bg-dark">
-            <video id="hero-bg" autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 transform scale-[1.08] origin-center">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-large-open-pit-mine-42805-large.mp4" type="video/mp4">
+        
+        <!-- Container Video Background -->
+        <div class="absolute inset-0 z-0 bg-dark pointer-events-none">
+            <video id="hero-bg" autoplay loop muted playsinline src="vidio/2.mp4" type="video/mp4" class="w-full h-full object-cover">
             </video>
+            
             <!-- Dark Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent pointer-events-none"></div>
-            <div class="absolute inset-0 bg-dark/20 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
+            <div class="absolute inset-0 bg-dark/20"></div>
         </div>
 
         <!-- Content -->
@@ -189,7 +190,7 @@
                     <div class="clip-text-container"><span class="clip-text" data-i18n="hero.l1">MINING</span></div>
                     <div class="clip-text-container"><span class="clip-text" data-i18n="hero.l2">CONNECTIVITY</span></div>
                 </h1>
-                
+
                 <div class="flex flex-col md:flex-row md:items-center gap-6 mt-8 hero-fade-in opacity-0">
                     <p class="text-accent text-sm tracking-widest-xl font-bold uppercase" data-i18n="hero.tag">— UNLIMITED INTERNET —</p>
                     <div class="hidden md:block w-12 h-[1px] bg-white/30"></div>
@@ -226,7 +227,7 @@
             <div class="lg:col-span-5 flex flex-col justify-end intro-desc opacity-0">
                 <div class="w-8 h-[2px] bg-accent mb-8"></div>
                 <p class="text-xl md:text-2xl leading-relaxed font-medium" data-i18n="intro.p">
-                    Internet Tambang menghadirkan infrastruktur konektivitas untuk mendukung operasi pertambangan di lokasi terpencil melalui integrasi jaringan terrestrial, wireless, fiber optic, dan satellite connectivity.
+                    Internet Tambang menghadirkan infrastruktur konektivitas untuk mendukung operasi pertambangan di lokasi terpencil melalui integrasi jaringan terrestrial, wireless, dan satellite connectivity.
                 </p>
                 <div class="mt-12 text-xs font-bold tracking-widest-xl uppercase text-muted border-l border-border pl-4" data-i18n="intro.lbl">
                     ABOUT THE NETWORK
@@ -375,7 +376,7 @@
                         </a>
                     </div>
                     <div class="lg:col-span-7 order-1 lg:order-2 h-[50vh] md:h-[70vh] overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1614088530761-001099684159?q=80&w=1969&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1614088530761-001099684159?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1614088530761-001099684159?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1614088530761-001099684159?q=80&w=1969&auto=format&fit=crop 1969w" sizes="100vw" decoding="async" alt="Telecom Tower" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                        <video src="vidio/4.mp4" autoplay loop muted playsinline sizes="100vw" decoding="async" alt="Telecom Tower" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
                     </div>
                 </div>
 
@@ -407,14 +408,14 @@
                         </a>
                     </div>
                     <div class="lg:col-span-7 order-1 lg:order-2 h-[50vh] md:h-[70vh] overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?q=80&w=2076&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1518623489648-a173ef7824f3?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1518623489648-a173ef7824f3?q=80&w=2076&auto=format&fit=crop 2076w" sizes="100vw" decoding="async" alt="Industrial Camp" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                        <img src="image/5.jpeg" sizes="100vw" decoding="async" alt="Industrial Camp" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
                     </div>
                 </div>
 
                 <!-- Solution 04 -->
                 <div class="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center solution-card">
                     <div class="lg:col-span-7 h-[50vh] md:h-[70vh] overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop 2070w" sizes="100vw" decoding="async" alt="Control Room" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                        <img src="image/" srcset="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop 2070w" sizes="100vw" decoding="async" alt="Control Room" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
                     </div>
                     <div class="lg:col-span-5 flex flex-col justify-center lg:pl-12">
                         <span class="text-accent font-mono text-2xl mb-4 block">04</span>
@@ -468,17 +469,16 @@
                 <p class="text-xl text-gray-600 mb-16 max-w-md reveal-up" data-i18n="ter.p">A unified terrestrial network engineered for demanding mining environments.</p>
                 
                 <ul class="space-y-6 text-3xl md:text-5xl font-bold uppercase tracking-tight text-gray-500 lg:text-gray-300 tech-list">
+
                     <li class="hover:text-dark transition-colors duration-300 cursor-pointer">WIRELESS</li>
-                    <li class="hover:text-dark transition-colors duration-300 cursor-pointer" data-i18n="ter.fiber">FIBER OPTIC</li>
-                    <li class="hover:text-dark transition-colors duration-300 cursor-pointer">MICROWAVE</li>
-                    <li class="hover:text-dark transition-colors duration-300 cursor-pointer">POINT-TO-POINT</li>
-                    <li class="hover:text-dark transition-colors duration-300 cursor-pointer">ENTERPRISE WIFI</li>
-                    <li class="hover:text-dark transition-colors duration-300 cursor-pointer">PRIVATE LTE</li>
+                    <li class="hover:text-dark transition-colors duration-300 cursor-pointer">VSAT</li>
+                    <li class="hover:text-dark transition-colors duration-300 cursor-pointer">DISASTER RECOVERY</li>
+                    <li class="hover:text-dark transition-colors duration-300 cursor-pointer">TUNNELING</li>
                 </ul>
             </div>
             
             <div class="order-1 lg:order-2 h-[60vh] lg:h-[90vh] overflow-hidden relative group">
-                <img src="https://images.unsplash.com/photo-1541887019623-df8141be3f15?q=80&w=2070&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1541887019623-df8141be3f15?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1541887019623-df8141be3f15?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1541887019623-df8141be3f15?q=80&w=2070&auto=format&fit=crop 2070w" sizes="100vw" decoding="async" alt="Terrestrial Tower" loading="lazy" class="w-full h-full object-cover parallax-img transform scale-110">
+                <img src="image/6.jpeg" sizes="100vw" decoding="async" alt="Terrestrial Tower" loading="lazy" class="w-full h-full object-cover parallax-img transform scale-110">
                 <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
             </div>
 
@@ -498,7 +498,7 @@
                 
                 <!-- Card 1 -->
                 <div class="h-full w-[45vw] flex-shrink-0 relative group overflow-hidden">
-                    <img alt="Pit area" src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                    <img alt="Pit area" src="image/14.png?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
                     <div class="absolute bottom-8 left-8 right-8">
                         <span class="text-accent font-mono mb-2 block">01</span>
@@ -509,7 +509,7 @@
 
                 <!-- Card 2 -->
                 <div class="h-full w-[45vw] flex-shrink-0 relative group overflow-hidden">
-                    <img alt="Worker camp" src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                    <img alt="Worker camp" src="image/7.jpeg" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
                     <div class="absolute bottom-8 left-8 right-8">
                         <span class="text-accent font-mono mb-2 block">02</span>
@@ -520,7 +520,7 @@
 
                 <!-- Card 3 -->
                 <div class="h-full w-[45vw] flex-shrink-0 relative group overflow-hidden">
-                    <img alt="Site office" src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                    <img alt="Site office" src="image/10.jpeg" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
                     <div class="absolute bottom-8 left-8 right-8">
                         <span class="text-accent font-mono mb-2 block">03</span>
@@ -561,7 +561,7 @@
         <div class="flex flex-col gap-8">
             <!-- Mobile Cards -->
             <div class="h-[360px] w-full relative overflow-hidden">
-                <img alt="Pit area" src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-60">
+                <img alt="Pit area" src="image/14" class="w-full h-full object-cover opacity-60">
                 <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6">
                     <span class="text-accent font-mono mb-1 block">01</span>
@@ -570,7 +570,7 @@
                 </div>
             </div>
             <div class="h-[360px] w-full relative overflow-hidden">
-                <img alt="Worker camp" src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-60">
+                <img alt="Worker camp" src="image/7.jpeg" class="w-full h-full object-cover opacity-60">
                 <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6">
                     <span class="text-accent font-mono mb-1 block">02</span>
@@ -579,7 +579,7 @@
                 </div>
             </div>
             <div class="h-[360px] w-full relative overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="Site office" loading="lazy" class="w-full h-full object-cover opacity-60">
+                <img src="image/10.jpeg" alt="Site office" loading="lazy" class="w-full h-full object-cover opacity-60">
                 <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6">
                     <span class="text-accent font-mono mb-1 block">03</span>
@@ -588,21 +588,21 @@
                 </div>
             </div>
             <div class="h-[360px] w-full relative overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop" alt="CCTV and security" loading="lazy" class="w-full h-full object-cover opacity-60">
+                <img src="image/4.jpeg" alt="Backwoods" loading="lazy" class="w-full h-full object-cover opacity-60">
                 <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6">
                     <span class="text-accent font-mono mb-1 block">04</span>
-                    <h3 class="text-3xl font-bold uppercase mb-2" data-i18n="use.4t">CCTV & SECURITY</h3>
-                    <p class="text-sm text-gray-300" data-i18n="use.4p">Continuous connectivity for surveillance and security systems.</p>
+                    <h3 class="text-3xl font-bold uppercase mb-2" data-i18n="use.4t">REMOTE AREA</h3>
+                    <p class="text-sm text-gray-300" data-i18n="use.4p">Continuous connectivity for backwoods.</p>
                 </div>
             </div>
             <div class="h-[360px] w-full relative overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" alt="Fleet and IoT" loading="lazy" class="w-full h-full object-cover opacity-60">
+                <img src="image/9.jpeg" alt="Fleet and IoT" loading="lazy" class="w-full h-full object-cover opacity-60">
                 <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6">
                     <span class="text-accent font-mono mb-1 block">05</span>
-                    <h3 class="text-3xl font-bold uppercase mb-2" data-i18n="use.5t">FLEET & IoT</h3>
-                    <p class="text-sm text-gray-300" data-i18n="use.5p">Network infrastructure for fleet monitoring, telemetry, and sensors.</p>
+                    <h3 class="text-3xl font-bold uppercase mb-2" data-i18n="use.5t">FLEET</h3>
+                    <p class="text-sm text-gray-300" data-i18n="use.5p">Network infrastructure for fleet monitoring.</p>
                 </div>
             </div>
         </div>
@@ -784,7 +784,7 @@
             <div class="flex flex-col gap-6">
                 <a href="#" class="text-3xl font-bold tracking-tight text-white hover-target">Internet Tambang</a>
                 <div class="text-accent text-sm tracking-widest-xl font-bold uppercase" data-i18n="foot.tag">
-                    MINING CONNECTIVITY<br>UNLIMITED INTERNET
+                    INTERNET MINING <br>UNLIMITED INTERNET
                 </div>
             </div>
 
