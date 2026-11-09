@@ -1,0 +1,2 @@
+# internet-tambang
+Landing Page
