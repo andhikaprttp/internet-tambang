@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi Tambang — Mining Connectivity | Unlimited Internet</title>
+    <meta name="theme-color" content="#090A0A">
+    <meta property="og:title" content="WiFi Tambang — Mining Connectivity">
+    <meta property="og:type" content="website">
+    <meta name="description" content="Solusi konektivitas untuk operasi pertambangan melalui jaringan wireless, terrestrial, fiber optic, dan satellite connectivity.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN for single file) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#090A0A',
+                        'dark-sec': '#111313',
+                        offwhite: '#F3F2EE',
+                        muted: '#9A9A9A',
+                        border: '#292929',
+                        accent: '#E85D20',
+                    },
+                    fontSize: {
+                        'massive': 'clamp(4rem, 10vw, 11rem)',
+                        'huge': 'clamp(3rem, 7vw, 8rem)',
+                    },
+                    lineHeight: {
+                        'tightest': '0.85',
+                    },
+                    letterSpacing: {
+                        'widest-xl': '0.3em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for specific overrides & cursor -->
+    <style>
+        body {
+            background-color: #090A0A;
+            color: #F3F2EE;
+            overflow-x: hidden;
+            
+        }
+
+        /* Kursor custom hanya aktif lewat JS di desktop */
+        body.custom-cursor, body.custom-cursor a, body.custom-cursor button, body.custom-cursor li { cursor: none; }
+        @media (max-width: 767px) { #indo-map text { font-size: 20px; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+        a:focus-visible, button:focus-visible { outline: 2px solid #E85D20; outline-offset: 3px; }
+
+        /* Custom Cursor */
+        .cursor-dot,
+        .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        .cursor-dot {
+            width: 6px;
+            height: 6px;
+            background-color: white;
+        }
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: width 0.3s, height 0.3s, background-color 0.3s;
+        }
+        .cursor-hover .cursor-outline {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: transparent;
+        }
+
+        /* Utility classes */
+        .text-outline {
+            -webkit-text-stroke: 1px #292929;
+            color: transparent;
+        }
+        .clip-text-container {
+            overflow: hidden;
+        }
+        .clip-text {
+            transform: translateY(110%);
+            display: inline-block;
+        }
+        
+        /* Hide scrollbar for horizontal scroll container */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Grid Background Pattern */
+        .bg-grid {
+            background-image: 
+                linear-gradient(to right, #292929 1px, transparent 1px),
+                linear-gradient(to bottom, #292929 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+    </style>
+    <noscript><style>.clip-text{transform:none}.hero-fade-in,.intro-desc{opacity:1}</style></noscript>
+</head>
+<body class="antialiased selection:bg-accent selection:text-white">
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+
+    <!-- 01. NAVBAR -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-6 px-6 md:px-12 flex justify-between items-center bg-transparent">
+        <a href="#" class="text-xl font-bold tracking-tight z-50 mix-blend-difference hover-target">WiFi Tambang</a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-8 text-sm font-medium mix-blend-difference">
+            <a href="#solutions" class="hover:text-accent transition-colors hover-target">Solutions</a>
+            <a href="#network" class="hover:text-accent transition-colors hover-target">Network</a>
+            <a href="#technology" class="hover:text-accent transition-colors hover-target">Technology</a>
+            <a href="#coverage" class="hover:text-accent transition-colors hover-target">Coverage</a>
+            <a href="#about" class="hover:text-accent transition-colors hover-target">About</a>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-6 z-50">
+            <div class="text-xs tracking-widest-xl mix-blend-difference">ID / EN</div>
+            <a href="#contact" class="flex items-center gap-2 border border-white/20 bg-white/5 backdrop-blur-md px-6 py-3 hover:bg-white hover:text-black transition-all duration-300 group hover-target">
+                <span class="text-sm font-semibold uppercase tracking-wider">Contact</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+            </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden z-50 mix-blend-difference hover-target p-2 -mr-2">
+            <i data-lucide="menu" class="w-8 h-8"></i>
+        </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 hidden lg:hidden flex-col justify-center gap-6 px-6 bg-dark/95 backdrop-blur-md">
+        <a href="#solutions" class="menu-link text-4xl font-bold uppercase tracking-tight">Solutions</a>
+        <a href="#network" class="menu-link text-4xl font-bold uppercase tracking-tight">Network</a>
+        <a href="#technology" class="menu-link text-4xl font-bold uppercase tracking-tight">Technology</a>
+        <a href="#coverage" class="menu-link text-4xl font-bold uppercase tracking-tight">Coverage</a>
+        <a href="#about" class="menu-link text-4xl font-bold uppercase tracking-tight">About</a>
+        <a href="#contact" class="menu-link mt-6 w-full text-center bg-accent text-white px-6 py-4 font-bold uppercase tracking-wider">Contact</a>
+    </div>
+
+    <!-- 02. HERO SECTION -->
+    <section id="hero" class="relative h-[100svh] md:h-screen w-full flex flex-col justify-end pb-12 px-6 md:px-12 overflow-hidden bg-dark">
+        <!-- Background Video -->
+        <div class="absolute inset-0 z-0 bg-dark">
+            <video id="hero-bg" autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 transform scale-[1.08] origin-center">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-large-open-pit-mine-42805-large.mp4" type="video/mp4">
+            </video>
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent pointer-events-none"></div>
+            <div class="absolute inset-0 bg-dark/20 pointer-events-none"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 w-full max-w-screen-2xl mx-auto flex flex-col lg:flex-row justify-between items-end gap-12">
+            
+            <div class="w-full lg:w-2/3">
+                <h1 class="text-[clamp(2.25rem,9.5vw,4rem)] md:text-massive font-bold leading-tightest tracking-tighter mb-4 text-white uppercase" id="hero-title">
+                    <div class="clip-text-container"><span class="clip-text">MINING</span></div>
+                    <div class="clip-text-container"><span class="clip-text">CONNECTIVITY</span></div>
+                </h1>
+                
+                <div class="flex flex-col md:flex-row md:items-center gap-6 mt-8 hero-fade-in opacity-0">
+                    <p class="text-accent text-sm tracking-widest-xl font-bold uppercase">— UNLIMITED INTERNET —</p>
+                    <div class="hidden md:block w-12 h-[1px] bg-white/30"></div>
+                    <p class="text-muted text-lg max-w-md">Reliable connectivity for critical mining operations beyond the limits of terrestrial infrastructure.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-start lg:items-end gap-8 hero-fade-in opacity-0">
+                <a href="#solutions" class="flex items-center gap-4 group hover-target">
+                    <div class="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center bg-white/5 backdrop-blur-sm group-hover:bg-white group-hover:text-black transition-colors duration-300">
+                        <i data-lucide="arrow-down-right" class="w-6 h-6 transform group-hover:translate-x-1 group-hover:translate-y-1 transition-transform"></i>
+                    </div>
+                    <span class="text-sm uppercase tracking-wider font-semibold">Explore Solutions</span>
+                </a>
+                
+                <div class="flex flex-col items-start lg:items-end gap-2 text-xs font-mono text-muted">
+                    <span>01 / CONNECTIVITY</span>
+                    <span class="tracking-widest">SCROLL TO EXPLORE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03. INTRO SECTION -->
+    <section id="about" class="py-20 md:py-48 bg-offwhite text-dark px-6 md:px-12">
+        <div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+            <div class="lg:col-span-7">
+                <h2 class="text-[clamp(1.9rem,9vw,3rem)] md:text-huge font-bold leading-[0.9] tracking-tighter uppercase intro-text">
+                    <div class="clip-text-container"><span class="clip-text">CONNECTING</span></div>
+                    <div class="clip-text-container"><span class="clip-text">THE</span></div>
+                    <div class="clip-text-container text-accent"><span class="clip-text">UNREACHABLE.</span></div>
+                </h2>
+            </div>
+            <div class="lg:col-span-5 flex flex-col justify-end intro-desc opacity-0">
+                <div class="w-8 h-[2px] bg-accent mb-8"></div>
+                <p class="text-xl md:text-2xl leading-relaxed font-medium">
+                    WiFi Tambang menghadirkan infrastruktur konektivitas untuk mendukung operasi pertambangan di lokasi terpencil melalui integrasi jaringan terrestrial, wireless, fiber optic, dan satellite connectivity.
+                </p>
+                <div class="mt-12 text-xs font-bold tracking-widest-xl uppercase text-muted border-l border-border pl-4">
+                    ABOUT THE NETWORK
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04. NETWORK ARCHITECTURE -->
+    <section id="network" class="py-20 md:py-32 bg-dark relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid opacity-20 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 md:px-12 relative z-10">
+            
+            <div class="text-center mb-16 md:mb-24">
+                <h2 class="text-4xl md:text-7xl font-bold tracking-tighter uppercase mb-6 reveal-up">ONE NETWORK.<br>EVERY SITE.</h2>
+                <p class="text-muted text-lg md:text-xl reveal-up max-w-2xl mx-auto">High-capacity LEO and reliable VSAT Backup distributed to every critical operational sector.</p>
+            </div>
+
+            <!-- Network Simulation Diagram -->
+            <div class="relative w-full aspect-[1000/700] md:aspect-[1000/600] architecture-diagram font-mono tracking-widest text-center text-[8px] md:text-xs mx-auto">
+                
+                <!-- SVG Lines -->
+                <svg class="absolute inset-0 w-full h-full z-0 pointer-events-none" viewBox="0 0 1000 600" preserveAspectRatio="none">
+                    <!-- Top Nodes to Load Balancer -->
+                    <!-- Starlinks (Active) -->
+                    <path class="network-path" d="M 150 100 L 150 200 L 500 270" fill="none" stroke="#E85D20" stroke-width="2" stroke-opacity="0.8"/>
+                    <path class="network-path" d="M 290 100 L 290 200 L 500 270" fill="none" stroke="#E85D20" stroke-width="2" stroke-opacity="0.8"/>
+                    <path class="network-path" d="M 430 100 L 430 200 L 500 270" fill="none" stroke="#E85D20" stroke-width="2" stroke-opacity="0.8"/>
+                    <path class="network-path" d="M 570 100 L 570 200 L 500 270" fill="none" stroke="#E85D20" stroke-width="2" stroke-opacity="0.8"/>
+                    
+                    <!-- VSAT Backup (Passive/Muted) -->
+                    <path class="network-path-muted" d="M 710 100 L 710 200 L 500 270" fill="none" stroke="#292929" stroke-width="2" stroke-dasharray="6 6"/>
+                    <path class="network-path-muted" d="M 850 100 L 850 200 L 500 270" fill="none" stroke="#292929" stroke-width="2" stroke-dasharray="6 6"/>
+
+                    <!-- Load Balancer to Core Router -->
+                    <path class="network-path" d="M 500 270 L 500 410" fill="none" stroke="#E85D20" stroke-width="3"/>
+
+                    <!-- Core Router to Sites -->
+                    <!-- Pit Area -->
+                    <path class="network-path" d="M 500 410 L 500 480 L 250 530" fill="none" stroke="#E85D20" stroke-width="2"/>
+                    <!-- Site Office -->
+                    <path class="network-path" d="M 500 410 L 500 530" fill="none" stroke="#E85D20" stroke-width="2"/>
+                    <!-- Worker Camp -->
+                    <path class="network-path" d="M 500 410 L 500 480 L 750 530" fill="none" stroke="#E85D20" stroke-width="2"/>
+                </svg>
+
+                <!-- HTML Nodes (Overlay perfectly aligned to SVG coordinates) -->
+                
+                <!-- TOP TIER: 4x Starlink, 2x VSAT -->
+                <!-- Starlink 1 -->
+                <div class="absolute z-10" style="top: 16.6%; left: 15%; transform: translate(-50%, -50%);">
+                    <div class="node-element border border-accent bg-dark/90 backdrop-blur px-2 py-2 md:px-4 text-accent shadow-[0_0_15px_rgba(232,93,32,0.15)] whitespace-nowrap font-bold flex flex-col md:flex-row items-center gap-2">
+                        <div class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></div>
+                        <span class="md:hidden">LEO</span><span class="hidden md:inline">STARLINK LEO</span>
+                    </div>
+                </div>
+                <!-- Starlink 2 -->
+                <div class="absolute z-10" style="top: 16.6%; left: 29%; transform: translate(-50%, -50%);">
+                    <div class="node-element border border-accent bg-dark/90 backdrop-blur px-2 py-2 md:px-4 text-accent shadow-[0_0_15px_rgba(232,93,32,0.15)] whitespace-nowrap font-bold flex flex-col md:flex-row items-center gap-2">
+                        <div class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></div>
+                        <span class="md:hidden">LEO</span><span class="hidden md:inline">STARLINK LEO</span>
+                    </div>
+                </div>
+                <!-- Starlink 3 -->
+                <div class="absolute z-10" style="top: 16.6%; left: 43%; transform: translate(-50%, -50%);">
+                    <div class="node-element border border-accent bg-dark/90 backdrop-blur px-2 py-2 md:px-4 text-accent shadow-[0_0_15px_rgba(232,93,32,0.15)] whitespace-nowrap font-bold flex flex-col md:flex-row items-center gap-2">
+                        <div class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></div>
+                        <span class="md:hidden">LEO</span><span class="hidden md:inline">STARLINK LEO</span>
+                    </div>
+                </div>
+                <!-- Starlink 4 -->
+                <div class="absolute z-10" style="top: 16.6%; left: 57%; transform: translate(-50%, -50%);">
+                    <div class="node-element border border-accent bg-dark/90 backdrop-blur px-2 py-2 md:px-4 text-accent shadow-[0_0_15px_rgba(232,93,32,0.15)] whitespace-nowrap font-bold flex flex-col md:flex-row items-center gap-2">
+                        <div class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></div>
+                        <span class="md:hidden">LEO</span><span class="hidden md:inline">STARLINK LEO</span>
+                    </div>
+                </div>
+                <!-- VSAT Backup 1 -->
+                <div class="absolute z-10" style="top: 16.6%; left: 71%; transform: translate(-50%, -50%);">
+                    <div class="node-element border border-border bg-dark-sec/90 backdrop-blur px-2 py-2 md:px-4 text-muted whitespace-nowrap flex flex-col md:flex-row items-center gap-2">
+                        <span class="md:hidden">VSAT</span><span class="hidden md:inline">VSAT BACKUP</span>
+                    </div>
+                </div>
+                <!-- VSAT Backup 2 -->
+                <div class="absolute z-10" style="top: 16.6%; left: 85%; transform: translate(-50%, -50%);">
+                    <div class="node-element border border-border bg-dark-sec/90 backdrop-blur px-2 py-2 md:px-4 text-muted whitespace-nowrap flex flex-col md:flex-row items-center gap-2">
+                        <span class="md:hidden">VSAT</span><span class="hidden md:inline">VSAT BACKUP</span>
+                    </div>
+                </div>
+
+                <!-- MIDDLE TIER: Load Balancer -->
+                <div class="absolute z-10" style="top: 45%; left: 50%; transform: translate(-50%, -50%);">
+                    <div class="node-element border border-white bg-white text-black px-4 py-2 md:px-8 md:py-3 font-bold whitespace-nowrap">
+                        LOAD BALANCER
+                    </div>
+                </div>
+
+                <!-- MIDDLE TIER: Core Router -->
+                <div class="absolute z-10" style="top: 68.3%; left: 50%; transform: translate(-50%, -50%);">
+                    <div class="node-element border border-white/40 bg-dark-sec/90 backdrop-blur px-4 py-2 md:px-8 md:py-3 text-white font-bold whitespace-nowrap flex items-center gap-3">
+                        <i data-lucide="server" class="w-4 h-4 text-accent"></i>
+                        CORE ROUTER
+                    </div>
+                </div>
+
+                <!-- BOTTOM TIER: DISTRIBUTION SITES -->
+                <!-- Pit Area -->
+                <div class="absolute z-10" style="top: 88.3%; left: 25%; transform: translate(-50%, -50%);">
+                    <div class="node-element border border-white/20 bg-dark/90 backdrop-blur px-2 py-2 md:px-8 md:py-4 text-white whitespace-nowrap">
+                        PIT AREA
+                    </div>
+                </div>
+                <!-- Site Office -->
+                <div class="absolute z-10" style="top: 88.3%; left: 50%; transform: translate(-50%, -50%);">
+                    <div class="node-element border border-white/20 bg-dark/90 backdrop-blur px-2 py-2 md:px-8 md:py-4 text-white whitespace-nowrap">
+                        SITE OFFICE
+                    </div>
+                </div>
+                <!-- Worker Camp -->
+                <div class="absolute z-10" style="top: 88.3%; left: 75%; transform: translate(-50%, -50%);">
+                    <div class="node-element border border-white/20 bg-dark/90 backdrop-blur px-2 py-2 md:px-8 md:py-4 text-white whitespace-nowrap">
+                        WORKER CAMP
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 05. SOLUTIONS (Vertical Massive Cards) -->
+    <section id="solutions" class="bg-offwhite text-dark py-20 md:py-32">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+            <h2 class="text-[clamp(2rem,9vw,3.75rem)] md:text-8xl font-bold tracking-tighter uppercase mb-12 md:mb-24 reveal-up">CONNECTIVITY<br>BUILT FOR MINING.</h2>
+
+            <div class="flex flex-col gap-12 md:gap-32">
+                
+                <!-- Solution 01 -->
+                <div class="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center solution-card">
+                    <div class="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center">
+                        <span class="text-accent font-mono text-2xl mb-4 block">01</span>
+                        <h3 class="text-3xl sm:text-4xl md:text-6xl font-bold uppercase tracking-tight mb-6">SITE CONNECTIVITY</h3>
+                        <p class="text-lg md:text-xl text-gray-700 mb-8 md:mb-12 max-w-md">Reliable connectivity infrastructure for remote mining operations ensuring seamless communication.</p>
+                        <a href="#" class="inline-flex items-center gap-4 uppercase font-bold tracking-wider hover-target w-max group/btn">
+                            Explore Solution
+                            <i data-lucide="arrow-right" class="w-5 h-5 transform group-hover/btn:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                    <div class="lg:col-span-7 order-1 lg:order-2 h-[50vh] md:h-[70vh] overflow-hidden bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1614088530761-001099684159?q=80&w=1969&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1614088530761-001099684159?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1614088530761-001099684159?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1614088530761-001099684159?q=80&w=1969&auto=format&fit=crop 1969w" sizes="100vw" decoding="async" alt="Telecom Tower" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                    </div>
+                </div>
+
+                <!-- Solution 02 -->
+                <div class="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center solution-card">
+                    <div class="lg:col-span-7 h-[50vh] md:h-[70vh] overflow-hidden bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop 2072w" sizes="100vw" decoding="async" alt="Satellite Dish" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                    </div>
+                    <div class="lg:col-span-5 flex flex-col justify-center lg:pl-12">
+                        <span class="text-accent font-mono text-2xl mb-4 block">02</span>
+                        <h3 class="text-3xl sm:text-4xl md:text-6xl font-bold uppercase tracking-tight mb-6">SATELLITE CONNECTIVITY</h3>
+                        <p class="text-lg md:text-xl text-gray-700 mb-8 md:mb-12 max-w-md">Satellite backhaul connecting remote sites beyond terrestrial infrastructure limits.</p>
+                        <a href="#" class="inline-flex items-center gap-4 uppercase font-bold tracking-wider hover-target w-max group/btn">
+                            Explore Solution
+                            <i data-lucide="arrow-right" class="w-5 h-5 transform group-hover/btn:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Solution 03 -->
+                <div class="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center solution-card">
+                    <div class="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center">
+                        <span class="text-accent font-mono text-2xl mb-4 block">03</span>
+                        <h3 class="text-3xl sm:text-4xl md:text-6xl font-bold uppercase tracking-tight mb-6">CAMP WIFI</h3>
+                        <p class="text-lg md:text-xl text-gray-700 mb-8 md:mb-12 max-w-md">High-capacity WiFi connectivity for worker camps, offices, and operational facilities.</p>
+                        <a href="#" class="inline-flex items-center gap-4 uppercase font-bold tracking-wider hover-target w-max group/btn">
+                            Explore Solution
+                            <i data-lucide="arrow-right" class="w-5 h-5 transform group-hover/btn:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                    <div class="lg:col-span-7 order-1 lg:order-2 h-[50vh] md:h-[70vh] overflow-hidden bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?q=80&w=2076&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1518623489648-a173ef7824f3?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1518623489648-a173ef7824f3?q=80&w=2076&auto=format&fit=crop 2076w" sizes="100vw" decoding="async" alt="Industrial Camp" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                    </div>
+                </div>
+
+                <!-- Solution 04 -->
+                <div class="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center solution-card">
+                    <div class="lg:col-span-7 h-[50vh] md:h-[70vh] overflow-hidden bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop 2070w" sizes="100vw" decoding="async" alt="Control Room" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                    </div>
+                    <div class="lg:col-span-5 flex flex-col justify-center lg:pl-12">
+                        <span class="text-accent font-mono text-2xl mb-4 block">04</span>
+                        <h3 class="text-3xl sm:text-4xl md:text-6xl font-bold uppercase tracking-tight mb-6">OPERATIONAL NETWORK</h3>
+                        <p class="text-lg md:text-xl text-gray-700 mb-8 md:mb-12 max-w-md">Network infrastructure supporting CCTV, IoT, fleet systems, dispatch, and communication.</p>
+                        <a href="#" class="inline-flex items-center gap-4 uppercase font-bold tracking-wider hover-target w-max group/btn">
+                            Explore Solution
+                            <i data-lucide="arrow-right" class="w-5 h-5 transform group-hover/btn:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 06. SATELLITE (Cinematic Dark) -->
+    <section class="relative py-28 md:py-48 bg-dark overflow-hidden flex items-center justify-center min-h-[90vh]">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072&auto=format&fit=crop 2072w" sizes="100vw" decoding="async" alt="Earth from Orbit" loading="lazy" class="w-full h-full object-cover opacity-30 parallax-bg">
+            <div class="absolute inset-0 bg-gradient-to-b from-dark via-transparent to-dark"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-screen-xl mx-auto px-6 text-center">
+            <h2 class="text-[clamp(2.25rem,11vw,3rem)] md:text-huge font-bold uppercase tracking-tighter mb-8 reveal-up">FROM ORBIT<br>TO SITE.</h2>
+            <p class="text-xl md:text-3xl text-gray-300 max-w-3xl mx-auto mb-20 font-light reveal-up">Satellite connectivity extends your network beyond terrestrial infrastructure.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/10 pt-16 reveal-up">
+                <div>
+                    <h4 class="text-accent font-mono text-sm mb-4">CAPABILITY</h4>
+                    <p class="text-2xl md:text-3xl font-bold uppercase">24/7 Monitoring</p>
+                </div>
+                <div>
+                    <h4 class="text-accent font-mono text-sm mb-4">REDUNDANCY</h4>
+                    <p class="text-2xl md:text-3xl font-bold uppercase">Multi Backhaul</p>
+                </div>
+                <div>
+                    <h4 class="text-accent font-mono text-sm mb-4">SPEED</h4>
+                    <p class="text-2xl md:text-3xl font-bold uppercase">Rapid Deployment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 07. TERRESTRIAL NETWORK -->
+    <section id="technology" class="py-20 md:py-32 bg-offwhite text-dark">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="order-2 lg:order-1">
+                <h2 class="text-[clamp(2.25rem,11vw,3.75rem)] md:text-8xl font-bold tracking-tighter uppercase mb-8 reveal-up">ON THE<br>GROUND.</h2>
+                <p class="text-xl text-gray-600 mb-16 max-w-md reveal-up">A unified terrestrial network engineered for demanding mining environments.</p>
+                
+                <ul class="space-y-6 text-3xl md:text-5xl font-bold uppercase tracking-tight text-gray-500 lg:text-gray-300 tech-list">
+                    <li class="hover:text-dark transition-colors duration-300 cursor-pointer">WIRELESS</li>
+                    <li class="hover:text-dark transition-colors duration-300 cursor-pointer">FIBER OPTIC</li>
+                    <li class="hover:text-dark transition-colors duration-300 cursor-pointer">MICROWAVE</li>
+                    <li class="hover:text-dark transition-colors duration-300 cursor-pointer">POINT-TO-POINT</li>
+                    <li class="hover:text-dark transition-colors duration-300 cursor-pointer">ENTERPRISE WIFI</li>
+                    <li class="hover:text-dark transition-colors duration-300 cursor-pointer">PRIVATE LTE</li>
+                </ul>
+            </div>
+            
+            <div class="order-1 lg:order-2 h-[60vh] lg:h-[90vh] overflow-hidden relative group">
+                <img src="https://images.unsplash.com/photo-1541887019623-df8141be3f15?q=80&w=2070&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1541887019623-df8141be3f15?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1541887019623-df8141be3f15?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1541887019623-df8141be3f15?q=80&w=2070&auto=format&fit=crop 2070w" sizes="100vw" decoding="async" alt="Terrestrial Tower" loading="lazy" class="w-full h-full object-cover parallax-img transform scale-110">
+                <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 08. USE CASE (Horizontal Scroll on Desktop) -->
+    <section id="usecases" class="bg-dark text-white overflow-hidden hidden lg:block">
+        <div id="h-scroll-wrapper" class="h-screen w-full relative flex items-center">
+            
+            <!-- Absolute heading fixed during pin -->
+            <div class="absolute top-16 left-12 z-20 mix-blend-difference pointer-events-none">
+                <h2 class="text-6xl font-bold tracking-tighter uppercase">BUILT FOR<br>EVERY OPERATION.</h2>
+            </div>
+
+            <div id="h-scroll-container" class="flex flex-nowrap h-[60vh] items-center px-12 gap-8 w-[250vw]">
+                
+                <!-- Card 1 -->
+                <div class="h-full w-[45vw] flex-shrink-0 relative group overflow-hidden">
+                    <img alt="Pit area" src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 right-8">
+                        <span class="text-accent font-mono mb-2 block">01</span>
+                        <h3 class="text-4xl font-bold uppercase mb-4">PIT AREA</h3>
+                        <p class="text-gray-300">Real-time connectivity connecting field operations with the command center.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="h-full w-[45vw] flex-shrink-0 relative group overflow-hidden">
+                    <img alt="Worker camp" src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 right-8">
+                        <span class="text-accent font-mono mb-2 block">02</span>
+                        <h3 class="text-4xl font-bold uppercase mb-4">WORKER CAMP</h3>
+                        <p class="text-gray-300">Reliable WiFi for employees and remote accommodation facilities.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="h-full w-[45vw] flex-shrink-0 relative group overflow-hidden">
+                    <img alt="Site office" src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 right-8">
+                        <span class="text-accent font-mono mb-2 block">03</span>
+                        <h3 class="text-4xl font-bold uppercase mb-4">SITE OFFICE</h3>
+                        <p class="text-gray-300">Enterprise connectivity for office systems and business operations.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="h-full w-[45vw] flex-shrink-0 relative group overflow-hidden">
+                    <img alt="CCTV and security" src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 right-8">
+                        <span class="text-accent font-mono mb-2 block">04</span>
+                        <h3 class="text-4xl font-bold uppercase mb-4">CCTV & SECURITY</h3>
+                        <p class="text-gray-300">Continuous connectivity for surveillance and security systems.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="h-full w-[45vw] flex-shrink-0 relative group overflow-hidden">
+                    <img alt="Fleet and IoT" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 right-8">
+                        <span class="text-accent font-mono mb-2 block">05</span>
+                        <h3 class="text-4xl font-bold uppercase mb-4">FLEET & IoT</h3>
+                        <p class="text-gray-300">Network infrastructure for fleet monitoring, telemetry, and sensors.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 08b. USE CASE (Mobile Fallback - Vertical) -->
+    <section class="bg-dark text-white py-24 px-6 lg:hidden">
+        <h2 class="text-4xl sm:text-5xl font-bold tracking-tighter uppercase mb-12">BUILT FOR<br>EVERY OPERATION.</h2>
+        <div class="flex flex-col gap-8">
+            <!-- Mobile Cards -->
+            <div class="h-[360px] w-full relative overflow-hidden">
+                <img alt="Pit area" src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6">
+                    <span class="text-accent font-mono mb-1 block">01</span>
+                    <h3 class="text-3xl font-bold uppercase mb-2">PIT AREA</h3>
+                    <p class="text-sm text-gray-300">Real-time connectivity connecting field operations with the command center.</p>
+                </div>
+            </div>
+            <div class="h-[360px] w-full relative overflow-hidden">
+                <img alt="Worker camp" src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6">
+                    <span class="text-accent font-mono mb-1 block">02</span>
+                    <h3 class="text-3xl font-bold uppercase mb-2">WORKER CAMP</h3>
+                    <p class="text-sm text-gray-300">Reliable WiFi for employees and remote accommodation facilities.</p>
+                </div>
+            </div>
+            <div class="h-[360px] w-full relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="Site office" loading="lazy" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6">
+                    <span class="text-accent font-mono mb-1 block">03</span>
+                    <h3 class="text-3xl font-bold uppercase mb-2">SITE OFFICE</h3>
+                    <p class="text-sm text-gray-300">Enterprise connectivity for office systems and business operations.</p>
+                </div>
+            </div>
+            <div class="h-[360px] w-full relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop" alt="CCTV and security" loading="lazy" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6">
+                    <span class="text-accent font-mono mb-1 block">04</span>
+                    <h3 class="text-3xl font-bold uppercase mb-2">CCTV & SECURITY</h3>
+                    <p class="text-sm text-gray-300">Continuous connectivity for surveillance and security systems.</p>
+                </div>
+            </div>
+            <div class="h-[360px] w-full relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" alt="Fleet and IoT" loading="lazy" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6">
+                    <span class="text-accent font-mono mb-1 block">05</span>
+                    <h3 class="text-3xl font-bold uppercase mb-2">FLEET & IoT</h3>
+                    <p class="text-sm text-gray-300">Network infrastructure for fleet monitoring, telemetry, and sensors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 09. RELIABILITY -->
+    <section class="py-20 md:py-32 bg-dark-sec text-white border-t border-border">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+            <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter uppercase mb-12 md:mb-24 text-center reveal-up">BUILT FOR<br>OPERATIONS.</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
+                <div class="bg-dark-sec p-8 sm:p-12 md:p-24 flex flex-col justify-center items-center text-center reveal-up">
+                    <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-4">24/7</h3>
+                    <p class="text-muted tracking-widest uppercase">Network Monitoring</p>
+                </div>
+                <div class="bg-dark-sec p-8 sm:p-12 md:p-24 flex flex-col justify-center items-center text-center reveal-up">
+                    <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-4">MULTI</h3>
+                    <p class="text-muted tracking-widest uppercase">Backhaul Routes</p>
+                </div>
+                <div class="bg-dark-sec p-8 sm:p-12 md:p-24 flex flex-col justify-center items-center text-center reveal-up">
+                    <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-4">REMOTE</h3>
+                    <p class="text-muted tracking-widest uppercase">On-Site Support</p>
+                </div>
+                <div class="bg-dark-sec p-8 sm:p-12 md:p-24 flex flex-col justify-center items-center text-center reveal-up">
+                    <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-4">ENTERPRISE</h3>
+                    <p class="text-muted tracking-widest uppercase">Grade Hardware</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. COVERAGE -->
+    <section id="coverage" class="py-20 md:py-32 bg-dark overflow-hidden relative">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 relative z-10 flex flex-col lg:flex-row items-center gap-16">
+            
+            <div class="w-full lg:w-1/3">
+                <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter uppercase mb-6 reveal-up">CONNECTING<br>MINING<br>ACROSS<br>INDONESIA.</h2>
+                
+                <div class="mt-12 space-y-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-3 h-3 bg-accent rounded-full"></div>
+                        <span class="font-mono text-sm text-gray-300">Mining Site POP</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-3 h-3 border border-white rounded-full"></div>
+                        <span class="font-mono text-sm text-gray-300">HQ Jakarta</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-6 h-0 border-t-2 border-dashed border-accent"></div>
+                        <span class="font-mono text-sm text-gray-300">Satellite Links</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-2/3 aspect-[2/1] md:aspect-auto md:h-[50vh] lg:h-[70vh] relative border border-white/5 bg-dark-sec flex items-center justify-center p-2 md:p-12 rounded-xl">
+                <!-- Abstract Map of Indonesia (SVG) -->
+                <svg id="indo-map" class="w-full h-full max-w-4xl" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet">
+                    
+                    <!-- Abstract Islands Geometries -->
+                    <g fill="#1a1c1c" stroke="#292929" stroke-width="1.5">
+                        <!-- Sumatra -->
+                        <polygon points="100,100 200,180 250,300 200,320 80,200 60,120" />
+                        <!-- Kalimantan -->
+                        <polygon points="320,120 480,100 520,220 440,280 340,240" />
+                        <!-- Java -->
+                        <polygon points="260,360 340,340 460,350 480,380 320,390 220,380" />
+                        <!-- Sulawesi -->
+                        <polygon points="550,160 640,140 680,220 600,320 540,280 580,240" />
+                        <!-- Maluku -->
+                        <polygon points="720,200 780,180 800,260 740,280" />
+                        <!-- Papua -->
+                        <polygon points="820,220 950,180 980,280 880,340 840,280" />
+                    </g>
+
+                    <!-- Connecting Routes (Dashed) -->
+                    <!-- Render actual dashed lines first -->
+                    <g fill="none" stroke="#E85D20" stroke-width="2" stroke-dasharray="8 6" opacity="0.8">
+                        <!-- HQ to Sumatra -->
+                        <path class="route-dash" d="M 280,350 Q 200,280 150,200" />
+                        <!-- HQ to Kalimantan -->
+                        <path class="route-dash" d="M 280,350 Q 340,280 400,200" />
+                        <!-- HQ to Sulawesi -->
+                        <path class="route-dash" d="M 280,350 Q 480,380 600,220" />
+                        <!-- HQ to Maluku -->
+                        <path class="route-dash" d="M 280,350 Q 550,420 760,240" />
+                        <!-- HQ to Papua -->
+                        <path class="route-dash" d="M 280,350 Q 600,450 900,260" />
+                    </g>
+                    
+                    <!-- Cover lines (Solid Dark color same as bg) to animate reveal of dashed lines -->
+                    <g fill="none" stroke="#111313" stroke-width="4">
+                        <path class="route-cover" d="M 280,350 Q 200,280 150,200" />
+                        <path class="route-cover" d="M 280,350 Q 340,280 400,200" />
+                        <path class="route-cover" d="M 280,350 Q 480,380 600,220" />
+                        <path class="route-cover" d="M 280,350 Q 550,420 760,240" />
+                        <path class="route-cover" d="M 280,350 Q 600,450 900,260" />
+                    </g>
+
+                    <!-- Node Points -->
+                    <g fill="#E85D20">
+                        <!-- HQ Jakarta -->
+                        <circle cx="280" cy="350" r="6" fill="#fff" />
+                        <circle cx="280" cy="350" r="16" fill="none" stroke="#fff" stroke-width="2" class="animate-ping opacity-60"/>
+                        
+                        <!-- Branches -->
+                        <circle cx="150" cy="200" r="4" />
+                        <circle cx="400" cy="200" r="4" />
+                        <circle cx="600" cy="220" r="4" />
+                        <circle cx="760" cy="240" r="4" />
+                        <circle cx="900" cy="260" r="4" />
+                    </g>
+
+                    <!-- Labels -->
+                    <g fill="#9A9A9A" font-size="12" font-family="monospace" letter-spacing="1">
+                        <text x="280" y="380" fill="#fff" text-anchor="middle" font-weight="bold">HQ JAKARTA</text>
+                        <text x="140" y="190" text-anchor="end">SUMATRA</text>
+                        <text x="400" y="180" text-anchor="middle">KALIMANTAN</text>
+                        <text x="610" y="200" text-anchor="start">SULAWESI</text>
+                        <text x="760" y="220" text-anchor="middle">MALUKU</text>
+                        <text x="910" y="240" text-anchor="start">PAPUA</text>
+                    </g>
+                </svg>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- 11. NETWORK OPERATIONS -->
+    <section class="py-20 md:py-32 bg-dark-sec border-t border-border">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="h-[50vh] lg:h-[70vh] overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-1000">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop 2070w" sizes="100vw" decoding="async" alt="NOC" loading="lazy" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-accent mix-blend-multiply opacity-20"></div>
+            </div>
+            <div>
+                <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter uppercase mb-8 reveal-up">CONNECTED.<br>MONITORED.<br>SUPPORTED.</h2>
+                <p class="text-xl text-gray-400 mb-12 max-w-md reveal-up">Continuous monitoring helps maintain connectivity across remote mining environments.</p>
+                
+                <ul class="space-y-4 border-t border-border pt-8 reveal-up">
+                    <li class="flex items-center gap-4 text-lg"><i data-lucide="check" class="text-accent w-5 h-5"></i> Network Monitoring</li>
+                    <li class="flex items-center gap-4 text-lg"><i data-lucide="check" class="text-accent w-5 h-5"></i> Remote Troubleshooting</li>
+                    <li class="flex items-center gap-4 text-lg"><i data-lucide="check" class="text-accent w-5 h-5"></i> Performance Monitoring</li>
+                    <li class="flex items-center gap-4 text-lg"><i data-lucide="check" class="text-accent w-5 h-5"></i> Incident Response</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 12. CTA SECTION -->
+    <section id="contact" class="relative h-[80vh] w-full flex items-center justify-center overflow-hidden">
+        <!-- Parallax Background -->
+        <div class="absolute inset-0 z-0">
+            <img id="cta-bg" src="https://images.unsplash.com/photo-1473625247510-8ceb1760943f?q=80&w=2011&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1473625247510-8ceb1760943f?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1473625247510-8ceb1760943f?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1473625247510-8ceb1760943f?q=80&w=2011&auto=format&fit=crop 2011w" sizes="100vw" decoding="async" alt="Aerial Dark" class="w-full h-full object-cover origin-center scale-125">
+            <div class="absolute inset-0 bg-dark/70"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6">
+            <h2 class="text-[clamp(2.25rem,11vw,4rem)] md:text-massive font-bold tracking-tighter uppercase mb-6">YOUR SITE.<br>OUR NETWORK.</h2>
+            <p class="text-xl md:text-2xl text-gray-300 mb-12">Ready to connect your next mining operation?</p>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <a href="#" class="w-full md:w-auto justify-center bg-white text-black px-6 md:px-8 py-4 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider hover:bg-accent hover:text-white transition-colors duration-300 flex items-center gap-3 group hover-target">
+                    Talk To Our Network Team
+                    <i data-lucide="arrow-up-right" class="w-6 h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                </a>
+                <a href="#solutions" class="w-full md:w-auto text-center px-6 md:px-8 py-4 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider text-white border border-white/20 hover:bg-white/10 transition-colors duration-300 hover-target">
+                    Explore Solutions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. FOOTER -->
+    <footer class="bg-dark py-24 px-6 md:px-12 border-t border-border">
+        <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16">
+            
+            <div class="flex flex-col gap-6">
+                <a href="#" class="text-3xl font-bold tracking-tight text-white hover-target">WiFi Tambang</a>
+                <div class="text-accent text-sm tracking-widest-xl font-bold uppercase">
+                    MINING CONNECTIVITY<br>UNLIMITED INTERNET
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-12 text-sm text-gray-400">
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-white font-bold uppercase tracking-widest mb-2">Menu</h4>
+                    <a href="#solutions" class="hover:text-white transition-colors hover-target">Solutions</a>
+                    <a href="#network" class="hover:text-white transition-colors hover-target">Network</a>
+                    <a href="#technology" class="hover:text-white transition-colors hover-target">Technology</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-white font-bold uppercase tracking-widest mb-2">Company</h4>
+                    <a href="#coverage" class="hover:text-white transition-colors hover-target">Coverage</a>
+                    <a href="#about" class="hover:text-white transition-colors hover-target">About</a>
+                    <a href="#contact" class="hover:text-white transition-colors hover-target">Contact</a>
+                </div>
+                <div class="flex flex-col gap-4 col-span-2 md:col-span-1">
+                    <h4 class="text-white font-bold uppercase tracking-widest mb-2">Social</h4>
+                    <a href="#" class="hover:text-white transition-colors hover-target">LinkedIn</a>
+                    <a href="#" class="hover:text-white transition-colors hover-target">Instagram</a>
+                    <a href="#" class="hover:text-white transition-colors hover-target">Email</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-screen-2xl mx-auto mt-24 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 uppercase tracking-widest">
+            <span>Indonesia</span>
+            <span>&copy; 2026 WiFi Tambang</span>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@0.454.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        // Initialize Icons
+        const icons = () => { if (window.lucide) lucide.createIcons(); };
+        icons();
+
+        // Register ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // --- Custom Cursor Logic ---
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        const hoverTargets = document.querySelectorAll('.hover-target, a, button');
+
+        // Check for reduced motion preference
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!prefersReducedMotion && window.innerWidth > 768 && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+            document.body.classList.add('custom-cursor');
+            let mouseX = window.innerWidth / 2;
+            let mouseY = window.innerHeight / 2;
+            
+            // GSAP quickSetters for performance
+            const xDot = gsap.quickSetter(cursorDot, "x", "px");
+            const yDot = gsap.quickSetter(cursorDot, "y", "px");
+            const xOutline = gsap.quickSetter(cursorOutline, "x", "px");
+            const yOutline = gsap.quickSetter(cursorOutline, "y", "px");
+
+            window.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                // Move dot instantly
+                xDot(mouseX);
+                yDot(mouseY);
+            });
+
+            // Move outline smoothly via ticker
+            gsap.ticker.add(() => {
+                const dt = 1.0 - Math.pow(1.0 - 0.15, gsap.ticker.deltaRatio());
+                
+                let currentX = gsap.getProperty(cursorOutline, "x") || mouseX;
+                let currentY = gsap.getProperty(cursorOutline, "y") || mouseY;
+                
+                xOutline(currentX + (mouseX - currentX) * dt);
+                yOutline(currentY + (mouseY - currentY) * dt);
+            });
+
+            // Hover states
+            hoverTargets.forEach(target => {
+                target.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+                target.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+            });
+        }
+
+        // --- Mobile Menu ---
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        function setMenu(open) {
+            menu.classList.toggle('hidden', !open);
+            menu.classList.toggle('flex', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+            menuBtn.setAttribute('aria-expanded', open);
+            menuBtn.innerHTML = '<i data-lucide="' + (open ? 'x' : 'menu') + '" class="w-8 h-8"></i>';
+            icons();
+        }
+        menuBtn.addEventListener('click', () => setMenu(menu.classList.contains('hidden')));
+        menu.querySelectorAll('.menu-link').forEach(l => l.addEventListener('click', () => setMenu(false)));
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+        window.addEventListener('resize', () => { if (window.innerWidth >= 1024) setMenu(false); });
+
+        // --- Navbar Glassmorphism ---
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-[#080808]/70', 'backdrop-blur-md');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('bg-[#080808]/70', 'backdrop-blur-md');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+
+        // --- Animations (GSAP) ---
+        if (!prefersReducedMotion) {
+            
+            // Hero Initial Load Timeline
+            const tlHero = gsap.timeline();
+            
+            // Initially hide things handled by CSS mostly, but ensure GSAP starts them right
+            gsap.set('.clip-text', { y: '110%' });
+            
+            tlHero.to('.clip-text', {
+                y: '0%',
+                duration: 1.2,
+                stagger: 0.15,
+                ease: "power4.out",
+                delay: 0.2
+            })
+            .to('.hero-fade-in', {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                stagger: 0.2,
+                ease: "power3.out"
+            }, "-=0.8")
+            .to('#hero-bg', {
+                scale: 1,
+                duration: 2,
+                ease: "power2.out"
+            }, 0);
+
+            // Hero Parallax on Scroll
+            gsap.to('#hero-bg', {
+                yPercent: 30,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: "#hero",
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+
+            // Intro Reveal
+            const tlIntro = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#about",
+                    start: "top 70%",
+                }
+            });
+            tlIntro.to('#about .clip-text', {
+                y: '0%',
+                duration: 1,
+                stagger: 0.1,
+                ease: "power4.out"
+            }).to('.intro-desc', {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power3.out"
+            }, "-=0.5");
+
+            // Generic Reveal Up
+            gsap.utils.toArray('.reveal-up').forEach(element => {
+                gsap.from(element, {
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 85%",
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power3.out"
+                });
+            });
+
+            // Network Architecture Reveal Nodes
+            gsap.utils.toArray('.node-element').forEach((node, i) => {
+                gsap.from(node, {
+                    scrollTrigger: {
+                        trigger: ".architecture-diagram",
+                        start: "top 75%",
+                    },
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.8,
+                    delay: i * 0.1,
+                    ease: "power3.out"
+                });
+            });
+
+            // Network Architecture Flow Animation
+            gsap.utils.toArray('.network-path').forEach((line) => {
+                const length = line.getTotalLength();
+                gsap.set(line, { strokeDasharray: length, strokeDashoffset: length });
+                gsap.to(line, {
+                    scrollTrigger: {
+                        trigger: ".architecture-diagram",
+                        start: "top 60%",
+                    },
+                    strokeDashoffset: 0,
+                    duration: 2,
+                    ease: "power2.inOut",
+                    delay: 0.4
+                });
+            });
+
+            // Map Routes Animation (Reveal dash lines by animating cover mask offset)
+            gsap.utils.toArray('.route-cover').forEach((cover) => {
+                const length = cover.getTotalLength();
+                gsap.set(cover, { strokeDasharray: length, strokeDashoffset: 0 });
+                gsap.to(cover, {
+                    scrollTrigger: {
+                        trigger: "#indo-map",
+                        start: "top 75%",
+                    },
+                    strokeDashoffset: length, // Slide cover away to reveal dashed route
+                    duration: 2.5,
+                    ease: "power3.inOut",
+                    delay: 0.3
+                });
+            });
+
+            // Terrestrial Parallax Image
+            gsap.to('.parallax-img', {
+                yPercent: 15,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: "#technology",
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+
+            // Satellite Parallax BG
+            gsap.to('.parallax-bg', {
+                yPercent: 20,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".parallax-bg",
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+
+            // --- Horizontal Scroll (Desktop Only) ---
+            let mm = gsap.matchMedia();
+            
+            mm.add("(min-width: 1024px)", () => {
+                const wrapper = document.querySelector("#h-scroll-wrapper");
+                const container = document.querySelector("#h-scroll-container");
+                
+                // Calculate how far to move based on container width vs window width
+                function getScrollAmount() {
+                    let containerWidth = container.scrollWidth;
+                    return -(containerWidth - window.innerWidth + 100); // +100 for padding allowance
+                }
+
+                const tween = gsap.to(container, {
+                    x: getScrollAmount,
+                    ease: "none"
+                });
+
+                ScrollTrigger.create({
+                    trigger: wrapper,
+                    start: "top top",
+                    end: () => `+=${getScrollAmount() * -1}`,
+                    pin: true,
+                    animation: tween,
+                    scrub: 1,
+                    invalidateOnRefresh: true
+                });
+
+                return () => {
+                    // Cleanup if matched media changes
+                };
+            });
+
+            // CTA Zoom out
+            gsap.to('#cta-bg', {
+                scale: 1,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: "#contact",
+                    start: "top bottom",
+                    end: "center center",
+                    scrub: true
+                }
+            });
+
+        } else {
+            // Fallbacks for reduced motion
+            gsap.set('.clip-text', { y: '0%' });
+            gsap.set('.hero-fade-in', { opacity: 1 });
+            gsap.set('.intro-desc', { opacity: 1 });
+            gsap.set('.node-element', { opacity: 1, y: 0 });
+            gsap.set('#hero-bg', { scale: 1 });
+            gsap.set('.network-path', { strokeDashoffset: 0 });
+            gsap.set('.route-cover', { strokeDashoffset: 1000 }); // Uncover immediately
+        }
+    </script>
+</body>
+</html>
