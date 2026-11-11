@@ -139,6 +139,7 @@
         <!-- Desktop Menu -->
         <div class="hidden lg:flex items-center gap-8 text-sm font-medium mix-blend-difference">
             <a href="#solutions" class="hover:text-accent transition-colors hover-target" data-i18n="nav.solutions">Solutions</a>
+            <a href="#hybrid" class="hover:text-accent transition-colors hover-target" data-i18n="nav.hybrid">Hybrid</a>
             <a href="#network" class="hover:text-accent transition-colors hover-target" data-i18n="nav.network">Network</a>
             <a href="#technology" class="hover:text-accent transition-colors hover-target" data-i18n="nav.technology">Technology</a>
             <a href="#coverage" class="hover:text-accent transition-colors hover-target" data-i18n="nav.coverage">Coverage</a>
@@ -162,6 +163,7 @@
     <!-- MOBILE MENU -->
     <div id="mobile-menu" class="fixed inset-0 z-40 hidden lg:hidden flex-col justify-center gap-6 px-6 bg-dark/95 backdrop-blur-md">
         <a href="#solutions" class="menu-link text-4xl font-bold uppercase tracking-tight" data-i18n="nav.solutions">Solutions</a>
+        <a href="#hybrid" class="menu-link text-4xl font-bold uppercase tracking-tight" data-i18n="nav.hybrid">Hybrid</a>
         <a href="#network" class="menu-link text-4xl font-bold uppercase tracking-tight" data-i18n="nav.network">Network</a>
         <a href="#technology" class="menu-link text-4xl font-bold uppercase tracking-tight" data-i18n="nav.technology">Technology</a>
         <a href="#coverage" class="menu-link text-4xl font-bold uppercase tracking-tight" data-i18n="nav.coverage">Coverage</a>
@@ -169,7 +171,8 @@
         <a href="#contact" class="menu-link mt-6 w-full text-center bg-accent text-white px-6 py-4 font-bold uppercase tracking-wider" data-i18n="nav.contact">Contact</a>
         <div class="lang-switch mt-4 flex items-center gap-2 text-xs tracking-widest-xl"><button type="button" class="lang-btn" data-lang="id" aria-label="Bahasa Indonesia">ID</button><span>/</span><button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button></div>
     </div>
-<!-- 02. HERO SECTION -->
+
+    <!-- 02. HERO SECTION -->
     <section id="hero" class="relative h-[100svh] md:h-screen w-full flex flex-col justify-end pb-12 px-6 md:px-12 overflow-hidden bg-dark">
         
         <!-- Container Video Background -->
@@ -186,9 +189,10 @@
         <div class="relative z-10 w-full max-w-screen-2xl mx-auto flex flex-col lg:flex-row justify-between items-end gap-12">
             
             <div class="w-full lg:w-2/3">
-                <h1 class="text-[clamp(2.25rem,9.5vw,4rem)] md:text-massive font-bold leading-tightest tracking-tighter mb-4 text-white uppercase" id="hero-title">
-                    <div class="clip-text-container"><span class="clip-text" data-i18n="hero.l1">MINING</span></div>
-                    <div class="clip-text-container"><span class="clip-text" data-i18n="hero.l2">CONNECTIVITY</span></div>
+                <h1 class="text-[clamp(1.75rem,6vw,3rem)] md:text-[clamp(2.5rem,5.5vw,5.5rem)] font-bold leading-tightest tracking-tighter mb-4 text-white uppercase" id="hero-title">
+                    <div class="clip-text-container"><span class="clip-text" data-i18n="hero.l1">WE ARE SOLUTION FOR</span></div>
+                    <div class="clip-text-container"><span class="clip-text" data-i18n="hero.l2">YOUR MINIMUM INTERNET</span></div>
+                    <div class="clip-text-container"><span class="clip-text text-accent" data-i18n="hero.l3">OPERATION BUDGET</span></div>
                 </h1>
 
                 <div class="flex flex-col md:flex-row md:items-center gap-6 mt-8 hero-fade-in opacity-0">
@@ -211,6 +215,17 @@
                     <span class="tracking-widest" data-i18n="hero.n2">SCROLL TO EXPLORE</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- 02b. VALUE PROPOSITION BANNER -->
+    <section id="value-prop" class="py-16 md:py-24 bg-accent text-white border-y border-border overflow-hidden">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+            <h2 class="text-[clamp(2.5rem,6vw,5.5rem)] font-extrabold uppercase tracking-tighter leading-[1.05] reveal-up">
+                <span class="text-dark" data-i18n="val.1">LOW BUDGET.</span> 
+                <span data-i18n="val.2">BIG BANDWIDTH.</span><br>
+                <span data-i18n="val.3">REMOTE SITE TO SITE IN ONE PACKAGE.</span>
+            </h2>
         </div>
     </section>
 
@@ -348,7 +363,7 @@
                 </div>
                 <!-- Worker Camp -->
                 <div class="absolute z-10" style="top: 88.3%; left: 75%; transform: translate(-50%, -50%);">
-                    <div class="node-element border border-white/20 bg-dark/90 backdrop-blur px-2 py-2 md:px-8 md:py-4 text-white whitespace-nowrap" data-i18n="node.camp" data-i18n="use.2t">
+                    <div class="node-element border border-white/20 bg-dark/90 backdrop-blur px-2 py-2 md:px-8 md:py-4 text-white whitespace-nowrap" data-i18n="node.camp">
                         WORKER CAMP
                     </div>
                 </div>
@@ -376,7 +391,7 @@
                         </a>
                     </div>
                     <div class="lg:col-span-7 order-1 lg:order-2 h-[50vh] md:h-[70vh] overflow-hidden bg-gray-200">
-                        <video src="vidio/4.mp4" autoplay loop muted playsinline sizes="100vw" decoding="async" alt="Telecom Tower" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                        <video src="vidio/4.mp4" autoplay loop muted playsinline class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"></video>
                     </div>
                 </div>
 
@@ -415,7 +430,7 @@
                 <!-- Solution 04 -->
                 <div class="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center solution-card">
                     <div class="lg:col-span-7 h-[50vh] md:h-[70vh] overflow-hidden bg-gray-200">
-                        <img src="image/" srcset="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop 2070w" sizes="100vw" decoding="async" alt="Control Room" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop 800w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop 1400w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop 2070w" sizes="100vw" decoding="async" alt="Control Room" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
                     </div>
                     <div class="lg:col-span-5 flex flex-col justify-center lg:pl-12">
                         <span class="text-accent font-mono text-2xl mb-4 block">04</span>
@@ -428,6 +443,46 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW HYBRID SYSTEM SECTION -->
+    <section id="hybrid" class="py-20 md:py-32 bg-dark-sec border-t border-border">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+            <div class="mb-16 md:mb-24 reveal-up">
+                <span class="text-accent font-mono text-sm tracking-widest-xl uppercase mb-4 block" data-i18n="hyb.label">HYBRID SYSTEM</span>
+                <h2 class="text-4xl md:text-7xl font-bold tracking-tighter uppercase mb-6" data-i18n="hyb.h">STARLINK, VSAT, FIBER OPTIC</h2>
+                <p class="text-muted text-lg md:text-xl max-w-2xl" data-i18n="hyb.p">Hybrid System Mix Technology for your Mining Operation</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-20 reveal-up">
+                <div class="border-t border-white/10 pt-6">
+                    <span class="text-accent font-mono text-2xl mb-4 block">01</span>
+                    <h4 class="text-2xl font-bold uppercase mb-4" data-i18n="hyb.1t">STARLINK LEO</h4>
+                    <p class="text-gray-400" data-i18n="hyb.1p">Low-latency LEO satellite with rapid deployment in remote areas.</p>
+                </div>
+                <div class="border-t border-white/10 pt-6">
+                    <span class="text-accent font-mono text-2xl mb-4 block">02</span>
+                    <h4 class="text-2xl font-bold uppercase mb-4" data-i18n="hyb.2t">VSAT</h4>
+                    <p class="text-gray-400" data-i18n="hyb.2p">Wide coverage and reliable backup connectivity during extreme weather conditions.</p>
+                </div>
+                <div class="border-t border-white/10 pt-6">
+                    <span class="text-accent font-mono text-2xl mb-4 block">03</span>
+                    <h4 class="text-2xl font-bold uppercase mb-4" data-i18n="hyb.3t">FIBER OPTIC</h4>
+                    <p class="text-gray-400" data-i18n="hyb.3p">High-capacity backhaul for accessible operational areas.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-up group/gallery">
+                <div class="relative overflow-hidden h-[50vh] md:h-[60vh] bg-dark group-hover/gallery:opacity-100 transition-all">
+                    <img src="image/15.jpeg" alt="Instalasi Starlink di site tambang" loading="lazy" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000">
+                    <div class="absolute bottom-4 left-4 right-4 text-xs font-mono text-white/70 bg-black/50 p-2 backdrop-blur-sm w-max" data-i18n="hyb.cap1">Starlink installation at mining site</div>
+                </div>
+                <div class="relative overflow-hidden h-[50vh] md:h-[60vh] bg-dark group-hover/gallery:opacity-100 transition-all">
+                    <img src="image/17.jpeg" alt="Pemasangan antena Starlink" loading="lazy" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000">
+                    <div class="absolute bottom-4 left-4 right-4 text-xs font-mono text-white/70 bg-black/50 p-2 backdrop-blur-sm w-max" data-i18n="hyb.cap2">Starlink antenna setup</div>
+                </div>
             </div>
         </div>
     </section>
@@ -469,7 +524,6 @@
                 <p class="text-xl text-gray-600 mb-16 max-w-md reveal-up" data-i18n="ter.p">A unified terrestrial network engineered for demanding mining environments.</p>
                 
                 <ul class="space-y-6 text-3xl md:text-5xl font-bold uppercase tracking-tight text-gray-500 lg:text-gray-300 tech-list">
-
                     <li class="hover:text-dark transition-colors duration-300 cursor-pointer">WIRELESS</li>
                     <li class="hover:text-dark transition-colors duration-300 cursor-pointer">VSAT</li>
                     <li class="hover:text-dark transition-colors duration-300 cursor-pointer">DISASTER RECOVERY</li>
@@ -513,7 +567,7 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
                     <div class="absolute bottom-8 left-8 right-8">
                         <span class="text-accent font-mono mb-2 block">02</span>
-                        <h3 class="text-4xl font-bold uppercase mb-4" data-i18n="node.camp" data-i18n="use.2t">WORKER CAMP</h3>
+                        <h3 class="text-4xl font-bold uppercase mb-4" data-i18n="node.camp">WORKER CAMP</h3>
                         <p class="text-gray-300" data-i18n="use.2p">Reliable WiFi for employees and remote accommodation facilities.</p>
                     </div>
                 </div>
@@ -529,20 +583,20 @@
                     </div>
                 </div>
 
-                <!-- Card 4 -->
+                <!-- Card 4 (Updated Image) -->
                 <div class="h-full w-[45vw] flex-shrink-0 relative group overflow-hidden">
-                    <img alt="CCTV and security" src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                    <img alt="Teknisi lapangan saat integrasi" src="image/9.jpeg" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
                     <div class="absolute bottom-8 left-8 right-8">
                         <span class="text-accent font-mono mb-2 block">04</span>
-                        <h3 class="text-4xl font-bold uppercase mb-4" data-i18n="use.4t">CCTV & SECURITY</h3>
-                        <p class="text-gray-300" data-i18n="use.4p">Continuous connectivity for surveillance and security systems.</p>
+                        <h3 class="text-4xl font-bold uppercase mb-4" data-i18n="use.4t">Area</h3>
+                        <p class="text-gray-300" data-i18n="use.4p">Continuous connectivity for Outside.</p>
                     </div>
                 </div>
 
-                <!-- Card 5 -->
+                <!-- Card 5 (Updated Image) -->
                 <div class="h-full w-[45vw] flex-shrink-0 relative group overflow-hidden">
-                    <img alt="Fleet and IoT" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                    <img alt="Fleet and IoT" src="image/1.jpeg" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
                     <div class="absolute bottom-8 left-8 right-8">
                         <span class="text-accent font-mono mb-2 block">05</span>
@@ -561,7 +615,7 @@
         <div class="flex flex-col gap-8">
             <!-- Mobile Cards -->
             <div class="h-[360px] w-full relative overflow-hidden">
-                <img alt="Pit area" src="image/14" class="w-full h-full object-cover opacity-60">
+                <img alt="Pit area" src="image/14.png" class="w-full h-full object-cover opacity-60">
                 <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6">
                     <span class="text-accent font-mono mb-1 block">01</span>
@@ -574,7 +628,7 @@
                 <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6">
                     <span class="text-accent font-mono mb-1 block">02</span>
-                    <h3 class="text-3xl font-bold uppercase mb-2" data-i18n="node.camp" data-i18n="use.2t">WORKER CAMP</h3>
+                    <h3 class="text-3xl font-bold uppercase mb-2" data-i18n="node.camp">WORKER CAMP</h3>
                     <p class="text-sm text-gray-300" data-i18n="use.2p">Reliable WiFi for employees and remote accommodation facilities.</p>
                 </div>
             </div>
@@ -587,22 +641,26 @@
                     <p class="text-sm text-gray-300" data-i18n="use.3p">Enterprise connectivity for office systems and business operations.</p>
                 </div>
             </div>
+            
+            <!-- Card 4 (Updated Image) -->
             <div class="h-[360px] w-full relative overflow-hidden">
-                <img src="image/4.jpeg" alt="Backwoods" loading="lazy" class="w-full h-full object-cover opacity-60">
+                <img src="image/9.jpeg" alt="Teknisi lapangan saat integrasi" loading="lazy" class="w-full h-full object-cover opacity-60">
                 <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6">
                     <span class="text-accent font-mono mb-1 block">04</span>
-                    <h3 class="text-3xl font-bold uppercase mb-2" data-i18n="use.4t">REMOTE AREA</h3>
-                    <p class="text-sm text-gray-300" data-i18n="use.4p">Continuous connectivity for backwoods.</p>
+                    <h3 class="text-3xl font-bold uppercase mb-2" data-i18n="use.4t">CCTV & SECURITY</h3>
+                    <p class="text-sm text-gray-300" data-i18n="use.4p">Continuous connectivity for surveillance and security systems.</p>
                 </div>
             </div>
+            
+            <!-- Card 5 (Updated Image) -->
             <div class="h-[360px] w-full relative overflow-hidden">
-                <img src="image/9.jpeg" alt="Fleet and IoT" loading="lazy" class="w-full h-full object-cover opacity-60">
+                <img src="image/1.jpeg" alt="Fleet and IoT" loading="lazy" class="w-full h-full object-cover opacity-60">
                 <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6">
                     <span class="text-accent font-mono mb-1 block">05</span>
-                    <h3 class="text-3xl font-bold uppercase mb-2" data-i18n="use.5t">FLEET</h3>
-                    <p class="text-sm text-gray-300" data-i18n="use.5p">Network infrastructure for fleet monitoring.</p>
+                    <h3 class="text-3xl font-bold uppercase mb-2" data-i18n="use.5t">FLEET & IoT</h3>
+                    <p class="text-sm text-gray-300" data-i18n="use.5p">Network infrastructure for fleet monitoring, telemetry, and sensors.</p>
                 </div>
             </div>
         </div>
@@ -777,16 +835,16 @@
         </div>
     </section>
 
-        <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/+62811458288" 
-   target="_blank" 
-   rel="noopener noreferrer" 
-   class="fixed bottom-6 right-6 z-[100] flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#1EBE57] hover:scale-110 transition-all duration-300 hover-target"
-   aria-label="Chat via WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 fill-current" viewBox="0 0 24 24">
-        <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.12.553 4.14 1.605 5.938L.15 24l6.196-1.626a11.96 11.96 0 005.685 1.428h.005c6.645 0 12.03-5.385 12.03-12.031S18.676 0 12.031 0zm0 21.737c-1.802 0-3.568-.485-5.114-1.401l-.367-.217-3.8.997 1.014-3.705-.238-.378a9.92 9.92 0 01-1.52-5.303c0-5.512 4.488-10 10.005-10 2.673 0 5.18 1.04 7.07 2.932 1.89 1.89 2.932 4.398 2.932 7.07 0 5.513-4.488 10-10.002 10zM17.53 14.24c-.302-.15-1.782-.879-2.059-.979-.276-.1-.478-.15-.678.15-.2.301-.778.979-.954 1.18-.175.201-.35.226-.653.076-.301-.15-1.272-.469-2.424-1.5-1.025-.909-1.716-2.032-1.916-2.333-.2-.301-.02-.465.13-.615.136-.135.301-.351.452-.527.15-.175.201-.301.301-.502.1-.201.05-.376-.025-.526-.075-.15-.678-1.636-.928-2.241-.24-.593-.487-.512-.678-.521-.175-.008-.376-.008-.577-.008-.2 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.51 0 1.48 1.079 2.91 1.23 3.111.15.2 2.11 3.221 5.112 4.517.715.309 1.272.493 1.708.631.716.228 1.368.196 1.884.119.58-.086 1.782-.728 2.033-1.43.251-.703.251-1.307.176-1.43-.075-.125-.276-.201-.578-.351z" />
-    </svg>
-</a>    
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/62811458288?text=Halo%20Internet%20Tambang,%20saya%20ingin%20bertanya." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-[100] flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#1EBE57] hover:scale-110 transition-all duration-300 hover-target"
+       aria-label="Chat via WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+            <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.12.553 4.14 1.605 5.938L.15 24l6.196-1.626a11.96 11.96 0 005.685 1.428h.005c6.645 0 12.03-5.385 12.03-12.031S18.676 0 12.031 0zm0 21.737c-1.802 0-3.568-.485-5.114-1.401l-.367-.217-3.8.997 1.014-3.705-.238-.378a9.92 9.92 0 01-1.52-5.303c0-5.512 4.488-10 10.005-10 2.673 0 5.18 1.04 7.07 2.932 1.89 1.89 2.932 4.398 2.932 7.07 0 5.513-4.488 10-10.002 10zM17.53 14.24c-.302-.15-1.782-.879-2.059-.979-.276-.1-.478-.15-.678.15-.2.301-.778.979-.954 1.18-.175.201-.35.226-.653.076-.301-.15-1.272-.469-2.424-1.5-1.025-.909-1.716-2.032-1.916-2.333-.2-.301-.02-.465.13-.615.136-.135.301-.351.452-.527.15-.175.201-.301.301-.502.1-.201.05-.376-.025-.526-.075-.15-.678-1.636-.928-2.241-.24-.593-.487-.512-.678-.521-.175-.008-.376-.008-.577-.008-.2 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.51 0 1.48 1.079 2.91 1.23 3.111.15.2 2.11 3.221 5.112 4.517.715.309 1.272.493 1.708.631.716.228 1.368.196 1.884.119.58-.086 1.782-.728 2.033-1.43.251-.703.251-1.307.176-1.43-.075-.125-.276-.201-.578-.351z" />
+        </svg>
+    </a>    
 
     <!-- 13. FOOTER -->
     <footer class="bg-dark py-24 px-6 md:px-12 border-t border-border">
@@ -803,6 +861,7 @@
                 <div class="flex flex-col gap-4">
                     <h4 class="text-white font-bold uppercase tracking-widest mb-2">Menu</h4>
                     <a href="#solutions" class="hover:text-white transition-colors hover-target" data-i18n="nav.solutions">Solutions</a>
+                    <a href="#hybrid" class="hover:text-white transition-colors hover-target" data-i18n="nav.hybrid">Hybrid</a>
                     <a href="#network" class="hover:text-white transition-colors hover-target" data-i18n="nav.network">Network</a>
                     <a href="#technology" class="hover:text-white transition-colors hover-target" data-i18n="nav.technology">Technology</a>
                 </div>
@@ -886,7 +945,101 @@
         }
 
         // --- Bahasa (ID / EN) ---
-        const I18N = {"nav.solutions": {"en": "Solutions", "id": "Solusi"}, "nav.network": {"en": "Network", "id": "Jaringan"}, "nav.technology": {"en": "Technology", "id": "Teknologi"}, "nav.coverage": {"en": "Coverage", "id": "Cakupan"}, "nav.about": {"en": "About", "id": "Tentang"}, "nav.contact": {"en": "Contact", "id": "Kontak"}, "hero.l1": {"en": "MINING", "id": "KONEKTIVITAS"}, "hero.l2": {"en": "CONNECTIVITY", "id": "TAMBANG"}, "hero.tag": {"en": "— UNLIMITED INTERNET —", "id": "— INTERNET TANPA BATAS —"}, "hero.p": {"en": "Reliable connectivity for critical mining operations beyond the limits of terrestrial infrastructure.", "id": "Konektivitas andal untuk operasi tambang kritis, melampaui batas infrastruktur terestrial."}, "hero.cta": {"en": "Explore Solutions", "id": "Lihat Solusi"}, "hero.n1": {"en": "01 / CONNECTIVITY", "id": "01 / KONEKTIVITAS"}, "hero.n2": {"en": "SCROLL TO EXPLORE", "id": "GULIR UNTUK MENJELAJAH"}, "intro.1": {"en": "CONNECTING", "id": "MENJANGKAU"}, "intro.2": {"en": "THE", "id": "YANG"}, "intro.3": {"en": "UNREACHABLE.", "id": "TERPENCIL."}, "intro.p": {"en": "Internet Tambang delivers connectivity infrastructure to support mining operations at remote locations through integrated terrestrial, wireless, fiber optic, and satellite networks.", "id": "Internet Tambang menghadirkan infrastruktur konektivitas untuk mendukung operasi pertambangan di lokasi terpencil melalui integrasi jaringan terrestrial, wireless, fiber optic, dan satellite connectivity."}, "intro.lbl": {"en": "ABOUT THE NETWORK", "id": "TENTANG JARINGAN"}, "net.h": {"en": "ONE NETWORK.<br>EVERY SITE.", "id": "SATU JARINGAN.<br>SEMUA SITE."}, "net.p": {"en": "High-capacity LEO and GEO reliable VSAT Backup distributed to every critical operational sector.", "id": "LEO dan GEO berkapasitas tinggi dan cadangan VSAT andal untuk setiap area operasional kritis."}, "node.sat": {"en": "SATELLITE LEO", "id": "SATELIT LEO"}, "node.vsat": {"en": "VSAT BACKUP", "id": "VSAT CADANGAN"}, "node.pit": {"en": "PIT AREA", "id": "AREA PIT"}, "node.office": {"en": "SITE OFFICE", "id": "KANTOR SITE"}, "node.camp": {"en": "WORKER CAMP", "id": "CAMP KERJA"}, "sol.h": {"en": "CONNECTIVITY<br>BUILT FOR MINING.", "id": "KONEKTIVITAS<br>UNTUK TAMBANG."}, "sol.cta": {"en": "Explore Solution", "id": "Lihat Solusi"}, "sol.1t": {"en": "SITE CONNECTIVITY", "id": "KONEKTIVITAS SITE"}, "sol.1p": {"en": "Reliable connectivity infrastructure for remote mining operations ensuring seamless communication.", "id": "Infrastruktur konektivitas andal untuk operasi tambang terpencil agar komunikasi tetap lancar."}, "sol.2t": {"en": "SATELLITE CONNECTIVITY", "id": "KONEKTIVITAS SATELIT"}, "sol.2p": {"en": "Satellite backhaul connecting remote sites beyond terrestrial infrastructure limits.", "id": "Backhaul satelit yang menghubungkan site terpencil di luar jangkauan infrastruktur terestrial."}, "sol.3t": {"en": "CAMP WIFI", "id": "WIFI CAMP"}, "sol.3p": {"en": "High-capacity WiFi connectivity for worker camps, offices, and operational facilities.", "id": "WiFi berkapasitas tinggi untuk camp pekerja, kantor, dan fasilitas operasional."}, "sol.4t": {"en": "OPERATIONAL NETWORK", "id": "JARINGAN OPERASIONAL"}, "sol.4p": {"en": "Network infrastructure supporting CCTV, IoT, fleet systems, dispatch, and communication.", "id": "Infrastruktur jaringan untuk CCTV, IoT, sistem armada, dispatch, dan komunikasi."}, "sat.h": {"en": "FROM ORBIT<br>TO SITE.", "id": "DARI ORBIT<br>KE SITE."}, "sat.p": {"en": "Satellite connectivity extends your network beyond terrestrial infrastructure.", "id": "Konektivitas satelit memperluas jaringan Anda melampaui infrastruktur terestrial."}, "sat.c1": {"en": "CAPABILITY", "id": "KEMAMPUAN"}, "sat.v1": {"en": "24/7 Monitoring", "id": "Monitoring 24/7"}, "sat.c2": {"en": "REDUNDANCY", "id": "REDUNDANSI"}, "sat.c3": {"en": "SPEED", "id": "KECEPATAN"}, "sat.v3": {"en": "Rapid Deployment", "id": "Deployment Cepat"}, "ter.h": {"en": "ON THE<br>GROUND.", "id": "DI<br>DARAT."}, "ter.p": {"en": "A unified terrestrial network engineered for demanding mining environments.", "id": "Jaringan terestrial terpadu yang dirancang untuk lingkungan tambang yang menuntut."}, "ter.fiber": {"en": "FIBER OPTIC", "id": "FIBER OPTIK"}, "use.h": {"en": "BUILT FOR<br>EVERY OPERATION.", "id": "UNTUK SEMUA<br>OPERASI."}, "use.1p": {"en": "Real-time connectivity connecting field operations with the command center.", "id": "Konektivitas real-time yang menghubungkan operasi lapangan dengan pusat komando."}, "use.2t": {"en": "WORKER CAMP", "id": "CAMP PEKERJA"}, "use.2p": {"en": "Reliable WiFi for employees and remote accommodation facilities.", "id": "WiFi andal untuk karyawan dan fasilitas akomodasi terpencil."}, "use.3p": {"en": "Enterprise connectivity for office systems and business operations.", "id": "Konektivitas enterprise untuk sistem kantor dan operasional bisnis."}, "use.4t": {"en": "CCTV & SECURITY", "id": "CCTV & KEAMANAN"}, "use.4p": {"en": "Continuous connectivity for surveillance and security systems.", "id": "Konektivitas tanpa putus untuk sistem pengawasan dan keamanan."}, "use.5t": {"en": "FLEET & IoT", "id": "ARMADA & IoT"}, "use.5p": {"en": "Network infrastructure for fleet monitoring, telemetry, and sensors.", "id": "Infrastruktur jaringan untuk monitoring armada, telemetri, dan sensor."}, "rel.h": {"en": "BUILT FOR<br>OPERATIONS.", "id": "ANDAL UNTUK<br>OPERASI."}, "rel.1": {"en": "Network Monitoring", "id": "Monitoring Jaringan"}, "rel.2": {"en": "Backhaul Routes", "id": "Jalur Backhaul"}, "rel.3": {"en": "On-Site Support", "id": "Dukungan On-Site"}, "rel.4h": {"en": "ENTERPRISE", "id": "HARDWARE"}, "rel.4": {"en": "Grade Hardware", "id": "Kelas Enterprise"}, "cov.h": {"en": "CONNECTING<br>MINING<br>ACROSS<br>INDONESIA.", "id": "HUBUNGKAN<br>TAMBANG<br>SELURUH<br>INDONESIA."}, "cov.l1": {"en": "Mining Site POP", "id": "POP Site Tambang"}, "cov.l3": {"en": "Satellite Links", "id": "Link Satelit"}, "cov.sum": {"en": "SUMATRA", "id": "SUMATERA"}, "noc.h": {"en": "CONNECTED.<br>MONITORED.<br>SUPPORTED.", "id": "TERHUBUNG.<br>TERPANTAU.<br>TERDUKUNG."}, "noc.p": {"en": "Continuous monitoring helps maintain connectivity across remote mining environments.", "id": "Pemantauan berkelanjutan menjaga konektivitas di lingkungan tambang terpencil."}, "noc.2": {"en": "Remote Troubleshooting", "id": "Troubleshooting Jarak Jauh"}, "noc.3": {"en": "Performance Monitoring", "id": "Monitoring Performa"}, "noc.4": {"en": "Incident Response", "id": "Penanganan Insiden"}, "cta.h": {"en": "YOUR SITE.<br>OUR NETWORK.", "id": "SITE ANDA.<br>JARINGAN KAMI."}, "cta.p": {"en": "Ready to connect your next mining operation?", "id": "Siap menghubungkan operasi tambang Anda berikutnya?"}, "cta.b1": {"en": "Talk To Our Network Team", "id": "Hubungi Tim Jaringan Kami"}, "foot.tag": {"en": "MINING CONNECTIVITY<br>UNLIMITED INTERNET", "id": "KONEKTIVITAS TAMBANG<br>INTERNET TANPA BATAS"}, "foot.co": {"en": "Company", "id": "Perusahaan"}, "foot.soc": {"en": "Social", "id": "Sosial"}, "_title": {"en": "Internet Tambang — Mining Connectivity | Unlimited Internet", "id": "Internet Tambang — Konektivitas Tambang | Internet Tanpa Batas"}, "_desc": {"en": "Connectivity solutions for mining operations through wireless, terrestrial, fiber optic, and satellite networks.", "id": "Solusi konektivitas untuk operasi pertambangan melalui jaringan wireless, terrestrial, fiber optic, dan satellite connectivity."}};
+        const I18N = {
+            "nav.solutions": {"en": "Solutions", "id": "Solusi"}, 
+            "nav.hybrid": {"en": "Hybrid", "id": "Hybrid"},
+            "nav.network": {"en": "Network", "id": "Jaringan"}, 
+            "nav.technology": {"en": "Technology", "id": "Teknologi"}, 
+            "nav.coverage": {"en": "Coverage", "id": "Cakupan"}, 
+            "nav.about": {"en": "About", "id": "Tentang"}, 
+            "nav.contact": {"en": "Contact", "id": "Kontak"}, 
+            "hero.l1": {"en": "WE ARE SOLUTION FOR", "id": "SOLUSI UNTUK ANGGARAN"}, 
+            "hero.l2": {"en": "YOUR MINIMUM INTERNET", "id": "INTERNET OPERASIONAL"}, 
+            "hero.l3": {"en": "OPERATION BUDGET", "id": "MINIMUM ANDA"},
+            "hero.tag": {"en": "— UNLIMITED INTERNET —", "id": "— INTERNET TANPA BATAS —"}, 
+            "hero.p": {"en": "Reliable connectivity for critical mining operations beyond the limits of terrestrial infrastructure.", "id": "Konektivitas andal untuk operasi tambang kritis, melampaui batas infrastruktur terestrial."}, 
+            "hero.cta": {"en": "Explore Solutions", "id": "Lihat Solusi"}, 
+            "hero.n1": {"en": "01 / CONNECTIVITY", "id": "01 / KONEKTIVITAS"}, 
+            "hero.n2": {"en": "SCROLL TO EXPLORE", "id": "GULIR UNTUK MENJELAJAH"}, 
+            "val.1": {"en": "LOW BUDGET.", "id": "BUDGET HEMAT."},
+            "val.2": {"en": "BIG BANDWIDTH.", "id": "BANDWIDTH BESAR."},
+            "val.3": {"en": "REMOTE SITE TO SITE IN ONE PACKAGE.", "id": "KONEKSI SITE-TO-SITE DALAM SATU PAKET."},
+            "intro.1": {"en": "CONNECTING", "id": "MENJANGKAU"}, 
+            "intro.2": {"en": "THE", "id": "YANG"}, 
+            "intro.3": {"en": "UNREACHABLE.", "id": "TERPENCIL."}, 
+            "intro.p": {"en": "Internet Tambang delivers connectivity infrastructure to support mining operations at remote locations through integrated terrestrial, wireless, fiber optic, and satellite networks.", "id": "Internet Tambang menghadirkan infrastruktur konektivitas untuk mendukung operasi pertambangan di lokasi terpencil melalui integrasi jaringan terrestrial, wireless, fiber optic, dan satellite connectivity."}, 
+            "intro.lbl": {"en": "ABOUT THE NETWORK", "id": "TENTANG JARINGAN"}, 
+            "net.h": {"en": "ONE NETWORK.<br>EVERY SITE.", "id": "SATU JARINGAN.<br>SEMUA SITE."}, 
+            "net.p": {"en": "High-capacity LEO and GEO reliable VSAT Backup distributed to every critical operational sector.", "id": "LEO dan GEO berkapasitas tinggi dan cadangan VSAT andal untuk setiap area operasional kritis."}, 
+            "node.sat": {"en": "SATELLITE LEO", "id": "SATELIT LEO"}, 
+            "node.vsat": {"en": "VSAT BACKUP", "id": "VSAT CADANGAN"}, 
+            "node.pit": {"en": "PIT AREA", "id": "AREA PIT"}, 
+            "node.office": {"en": "SITE OFFICE", "id": "KANTOR SITE"}, 
+            "node.camp": {"en": "WORKER CAMP", "id": "CAMP KERJA"}, 
+            "sol.h": {"en": "CONNECTIVITY<br>BUILT FOR MINING.", "id": "KONEKTIVITAS<br>UNTUK TAMBANG."}, 
+            "sol.cta": {"en": "Explore Solution", "id": "Lihat Solusi"}, 
+            "sol.1t": {"en": "SITE CONNECTIVITY", "id": "KONEKTIVITAS SITE"}, 
+            "sol.1p": {"en": "Reliable connectivity infrastructure for remote mining operations ensuring seamless communication.", "id": "Infrastruktur konektivitas andal untuk operasi tambang terpencil agar komunikasi tetap lancar."}, 
+            "sol.2t": {"en": "SATELLITE CONNECTIVITY", "id": "KONEKTIVITAS SATELIT"}, 
+            "sol.2p": {"en": "Satellite backhaul connecting remote sites beyond terrestrial infrastructure limits.", "id": "Backhaul satelit yang menghubungkan site terpencil di luar jangkauan infrastruktur terestrial."}, 
+            "sol.3t": {"en": "CAMP WIFI", "id": "WIFI CAMP"}, 
+            "sol.3p": {"en": "High-capacity WiFi connectivity for worker camps, offices, and operational facilities.", "id": "WiFi berkapasitas tinggi untuk camp pekerja, kantor, dan fasilitas operasional."}, 
+            "sol.4t": {"en": "OPERATIONAL NETWORK", "id": "JARINGAN OPERASIONAL"}, 
+            "sol.4p": {"en": "Network infrastructure supporting CCTV, IoT, fleet systems, dispatch, and communication.", "id": "Infrastruktur jaringan untuk CCTV, IoT, sistem armada, dispatch, dan komunikasi."}, 
+            "hyb.label": {"en": "HYBRID SYSTEM", "id": "SISTEM HYBRID"},
+            "hyb.h": {"en": "STARLINK, VSAT, FIBER OPTIC", "id": "STARLINK, VSAT, FIBER OPTIC"},
+            "hyb.p": {"en": "Hybrid System Mix Technology for your Mining Operation", "id": "Kombinasi Teknologi Sistem Hybrid untuk Operasi Tambang Anda"},
+            "hyb.1t": {"en": "STARLINK LEO", "id": "STARLINK LEO"},
+            "hyb.1p": {"en": "Low-latency LEO satellite with rapid deployment in remote areas.", "id": "Satelit LEO low-latency dengan deployment cepat di lokasi terpencil."},
+            "hyb.2t": {"en": "VSAT", "id": "VSAT"},
+            "hyb.2p": {"en": "Wide coverage and reliable backup connectivity during extreme weather conditions.", "id": "Cakupan luas dan konektivitas backup andal saat kondisi cuaca ekstrem."},
+            "hyb.3t": {"en": "FIBER OPTIC", "id": "FIBER OPTIC"},
+            "hyb.3p": {"en": "High-capacity backhaul for accessible operational areas.", "id": "Backhaul kapasitas besar untuk area operasional yang dapat dijangkau."},
+            "hyb.cap1": {"en": "Starlink installation at mining site", "id": "Pemasangan Starlink di lokasi tambang"},
+            "hyb.cap2": {"en": "Starlink antenna setup", "id": "Pemasangan antena Starlink"},
+            "sat.h": {"en": "FROM ORBIT<br>TO SITE.", "id": "DARI ORBIT<br>KE SITE."}, 
+            "sat.p": {"en": "Satellite connectivity extends your network beyond terrestrial infrastructure.", "id": "Konektivitas satelit memperluas jaringan Anda melampaui infrastruktur terestrial."}, 
+            "sat.c1": {"en": "CAPABILITY", "id": "KEMAMPUAN"}, 
+            "sat.v1": {"en": "24/7 Monitoring", "id": "Monitoring 24/7"}, 
+            "sat.c2": {"en": "REDUNDANCY", "id": "REDUNDANSI"}, 
+            "sat.c3": {"en": "SPEED", "id": "KECEPATAN"}, 
+            "sat.v3": {"en": "Rapid Deployment", "id": "Deployment Cepat"}, 
+            "ter.h": {"en": "ON THE<br>GROUND.", "id": "DI<br>DARAT."}, 
+            "ter.p": {"en": "A unified terrestrial network engineered for demanding mining environments.", "id": "Jaringan terestrial terpadu yang dirancang untuk lingkungan tambang yang menuntut."}, 
+            "ter.fiber": {"en": "FIBER OPTIC", "id": "FIBER OPTIK"}, 
+            "use.h": {"en": "BUILT FOR<br>EVERY OPERATION.", "id": "UNTUK SEMUA<br>OPERASI."}, 
+            "use.1p": {"en": "Real-time connectivity connecting field operations with the command center.", "id": "Konektivitas real-time yang menghubungkan operasi lapangan dengan pusat komando."}, 
+            "use.2p": {"en": "Reliable WiFi for employees and remote accommodation facilities.", "id": "WiFi andal untuk karyawan dan fasilitas akomodasi terpencil."}, 
+            "use.3p": {"en": "Enterprise connectivity for office systems and business operations.", "id": "Konektivitas enterprise untuk sistem kantor dan operasional bisnis."}, 
+            "use.4t": {"en": "Outside Area", "id": "Area Terbuka"}, 
+            "use.4p": {"en": "Continuous connectivity Outside Area.", "id": "Konektivitas tanpa putus untuk area terbuka."}, 
+            "use.5t": {"en": "INFRA", "id": "INFRA"}, 
+            "use.5p": {"en": "Network infrastructure monitoring.", "id": "Infrastruktur jaringan untuk monitoring."}, 
+            "rel.h": {"en": "BUILT FOR<br>OPERATIONS.", "id": "ANDAL UNTUK<br>OPERASI."}, 
+            "rel.1": {"en": "Network Monitoring", "id": "Monitoring Jaringan"}, 
+            "rel.2": {"en": "Backhaul Routes", "id": "Jalur Backhaul"}, 
+            "rel.3": {"en": "On-Site Support", "id": "Dukungan On-Site"}, 
+            "rel.4h": {"en": "ENTERPRISE", "id": "HARDWARE"}, 
+            "rel.4": {"en": "Grade Hardware", "id": "Kelas Enterprise"}, 
+            "cov.h": {"en": "CONNECTING<br>MINING<br>ACROSS<br>INDONESIA.", "id": "HUBUNGKAN<br>TAMBANG<br>SELURUH<br>INDONESIA."}, 
+            "cov.l1": {"en": "Mining Site POP", "id": "POP Site Tambang"}, 
+            "cov.l3": {"en": "Satellite Links", "id": "Link Satelit"}, 
+            "cov.sum": {"en": "SUMATRA", "id": "SUMATERA"}, 
+            "noc.h": {"en": "CONNECTED.<br>MONITORED.<br>SUPPORTED.", "id": "TERHUBUNG.<br>TERPANTAU.<br>TERDUKUNG."}, 
+            "noc.p": {"en": "Continuous monitoring helps maintain connectivity across remote mining environments.", "id": "Pemantauan berkelanjutan menjaga konektivitas di lingkungan tambang terpencil."}, 
+            "noc.2": {"en": "Remote Troubleshooting", "id": "Troubleshooting Jarak Jauh"}, 
+            "noc.3": {"en": "Performance Monitoring", "id": "Monitoring Performa"}, 
+            "noc.4": {"en": "Incident Response", "id": "Penanganan Insiden"}, 
+            "cta.h": {"en": "YOUR SITE.<br>OUR NETWORK.", "id": "SITE ANDA.<br>JARINGAN KAMI."}, 
+            "cta.p": {"en": "Ready to connect your next mining operation?", "id": "Siap menghubungkan operasi tambang Anda berikutnya?"}, 
+            "cta.b1": {"en": "Talk To Our Network Team", "id": "Hubungi Tim Jaringan Kami"}, 
+            "foot.tag": {"en": "MINING CONNECTIVITY<br>UNLIMITED INTERNET", "id": "KONEKTIVITAS TAMBANG<br>INTERNET TANPA BATAS"}, 
+            "foot.co": {"en": "Company", "id": "Perusahaan"}, 
+            "foot.soc": {"en": "Social", "id": "Sosial"}, 
+            "_title": {"en": "Internet Tambang — Mining Connectivity | Unlimited Internet", "id": "Internet Tambang — Konektivitas Tambang | Internet Tanpa Batas"}, 
+            "_desc": {"en": "Connectivity solutions for mining operations through wireless, terrestrial, fiber optic, and satellite networks. Low Budget, Big Bandwidth.", "id": "Solusi konektivitas untuk operasi pertambangan melalui jaringan wireless, terrestrial, fiber optic, dan satellite. Budget hemat, bandwidth besar."}
+        };
+        
         function applyLang(lang) {
             document.documentElement.lang = lang;
             document.querySelectorAll('[data-i18n]').forEach(el => {
