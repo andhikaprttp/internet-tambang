@@ -220,12 +220,33 @@
 
     <!-- 02b. VALUE PROPOSITION BANNER -->
     <section id="value-prop" class="py-16 md:py-24 bg-accent text-white border-y border-border overflow-hidden">
-        <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 flex flex-col gap-6">
             <h2 class="text-[clamp(2.5rem,6vw,5.5rem)] font-extrabold uppercase tracking-tighter leading-[1.05] reveal-up">
                 <span class="text-dark" data-i18n="val.1">LOW BUDGET.</span> 
                 <span data-i18n="val.2">BIG BANDWIDTH.</span><br>
                 <span data-i18n="val.3">REMOTE SITE TO SITE IN ONE PACKAGE.</span>
             </h2>
+            <div class="mt-4 md:mt-8 reveal-up">
+                <span class="inline-block bg-dark text-white px-6 md:px-8 py-3 md:py-4 text-2xl md:text-5xl font-black uppercase tracking-wider skew-x-[-10deg] shadow-[8px_8px_0px_0px_rgba(17,19,19,0.5)]">
+                    <span class="skew-x-[10deg] inline-block" data-i18n="val.4">SPEED UP TO 200 Mbps</span>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02c. TRUST / EXPERIENCE STATS -->
+    <section class="py-16 md:py-20 bg-dark text-white border-b border-border overflow-hidden relative">
+        <!-- Subtle BG Pattern -->
+        <div class="absolute inset-0 bg-grid opacity-10 pointer-events-none"></div>
+        
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 text-center relative z-10">
+            <p class="text-[clamp(1.5rem,3.5vw,3rem)] font-medium leading-snug md:leading-normal max-w-5xl mx-auto reveal-up">
+                <span data-i18n="stat.0">Kami berpengalaman menangani lebih dari </span>
+                <span class="font-bold text-accent">1000+</span> 
+                <span data-i18n="stat.1"> user dalam kawasan tambang dan dipercaya lebih dari </span>
+                <span class="font-bold text-accent">15+</span> 
+                <span data-i18n="stat.2"> perusahaan tambang besar di Indonesia.</span>
+            </p>
         </div>
     </section>
 
@@ -266,7 +287,7 @@
                 
                 <!-- SVG Lines -->
                 <svg class="absolute inset-0 w-full h-full z-0 pointer-events-none" viewBox="0 0 1000 600" preserveAspectRatio="none">
-                    <!-- Top Nodes to Load Balancer -->
+                    <!-- Top Nodes to Load Balancer (Smarthub) -->
                     <!-- Satellites (Active) -->
                     <path class="network-path" d="M 150 100 L 150 200 L 500 270" fill="none" stroke="#E85D20" stroke-width="2" stroke-opacity="0.8"/>
                     <path class="network-path" d="M 290 100 L 290 200 L 500 270" fill="none" stroke="#E85D20" stroke-width="2" stroke-opacity="0.8"/>
@@ -277,7 +298,7 @@
                     <path class="network-path-muted" d="M 710 100 L 710 200 L 500 270" fill="none" stroke="#292929" stroke-width="2" stroke-dasharray="6 6"/>
                     <path class="network-path-muted" d="M 850 100 L 850 200 L 500 270" fill="none" stroke="#292929" stroke-width="2" stroke-dasharray="6 6"/>
 
-                    <!-- Load Balancer to Core Router -->
+                    <!-- Smarthub to Core Router -->
                     <path class="network-path" d="M 500 270 L 500 410" fill="none" stroke="#E85D20" stroke-width="3"/>
 
                     <!-- Core Router to Sites -->
@@ -289,7 +310,7 @@
                     <path class="network-path" d="M 500 410 L 500 480 L 750 530" fill="none" stroke="#E85D20" stroke-width="2"/>
                 </svg>
 
-                <!-- HTML Nodes (Overlay perfectly aligned to SVG coordinates) -->
+                <!-- HTML Nodes -->
                 
                 <!-- TOP TIER: 4x Satellite, 2x VSAT -->
                 <!-- Satellite 1 -->
@@ -333,10 +354,10 @@
                     </div>
                 </div>
 
-                <!-- MIDDLE TIER: Load Balancer -->
+                <!-- MIDDLE TIER: SMARTHUB -->
                 <div class="absolute z-10" style="top: 45%; left: 50%; transform: translate(-50%, -50%);">
                     <div class="node-element border border-white bg-white text-black px-4 py-2 md:px-8 md:py-3 font-bold whitespace-nowrap">
-                        LOAD BALANCER
+                        SMARTHUB
                     </div>
                 </div>
 
@@ -859,24 +880,30 @@
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-12 text-sm text-gray-400">
                 <div class="flex flex-col gap-4">
-                    <h4 class="text-white font-bold uppercase tracking-widest mb-2">Menu</h4>
+                    <h4 class="text-white font-bold uppercase tracking-widest mb-2 flex items-center gap-2"><i data-lucide="compass" class="w-4 h-4 text-accent"></i> Menu</h4>
                     <a href="#solutions" class="hover:text-white transition-colors hover-target" data-i18n="nav.solutions">Solutions</a>
                     <a href="#hybrid" class="hover:text-white transition-colors hover-target" data-i18n="nav.hybrid">Hybrid</a>
                     <a href="#network" class="hover:text-white transition-colors hover-target" data-i18n="nav.network">Network</a>
                     <a href="#technology" class="hover:text-white transition-colors hover-target" data-i18n="nav.technology">Technology</a>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <h4 class="text-white font-bold uppercase tracking-widest mb-2" data-i18n="foot.co">Company</h4>
+                    <h4 class="text-white font-bold uppercase tracking-widest mb-2 flex items-center gap-2"><i data-lucide="building-2" class="w-4 h-4 text-accent"></i> <span data-i18n="foot.co">Company</span></h4>
                     <a href="#coverage" class="hover:text-white transition-colors hover-target" data-i18n="nav.coverage">Coverage</a>
                     <a href="#about" class="hover:text-white transition-colors hover-target" data-i18n="nav.about">About</a>
                     <a href="#contact" class="hover:text-white transition-colors hover-target" data-i18n="nav.contact">Contact</a>
                 </div>
                 <div class="flex flex-col gap-4 col-span-2 md:col-span-1">
-                    <h4 class="text-white font-bold uppercase tracking-widest mb-2" data-i18n="foot.soc">Social</h4>
-                    <a href="#" class="hover:text-white transition-colors hover-target">LinkedIn</a>
-                    <a href="#" class="hover:text-white transition-colors hover-target">Instagram</a>
-                    <a href="#" class="hover:text-white transition-colors hover-target">Email</a>
+                    <h4 class="text-white font-bold uppercase tracking-widest mb-2 flex items-center gap-2"><i data-lucide="phone-call" class="w-4 h-4 text-accent"></i> <span data-i18n="foot.soc">Kontak</span></h4>
+                    <a href="#" class="hover:text-white transition-colors hover-target">0811458288</a>
+                    <a href="#" class="hover:text-white transition-colors hover-target">081222989818</a>
+                    <a href="#" class="hover:text-white transition-colors hover-target">021 (40057330)</a>
                 </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-white font-bold uppercase tracking-widest mb-2 flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-accent"></i> Email</h4>
+                    <a href="#coverage" class="hover:text-white transition-colors hover-target">sales@reajaya.co.id</a>
+                    <a href="#about" class="hover:text-white transition-colors hover-target">sales@internettambang.com</a>
+                </div>
+
             </div>
         </div>
         
@@ -953,9 +980,9 @@
             "nav.coverage": {"en": "Coverage", "id": "Cakupan"}, 
             "nav.about": {"en": "About", "id": "Tentang"}, 
             "nav.contact": {"en": "Contact", "id": "Kontak"}, 
-            "hero.l1": {"en": "WE ARE SOLUTION FOR", "id": "WE ARE SOLUTION FOR"}, 
-            "hero.l2": {"en": "YOUR MINIMUM INTERNET", "id": "YOUR MINIMUM INTERNET"}, 
-            "hero.l3": {"en": "OPERATION BUDGET", "id": "OPERATION BUDGET"},
+            "hero.l1": {"en": "WE ARE SOLUTION FOR", "id": "SOLUSI UNTUK ANGGARAN"}, 
+            "hero.l2": {"en": "YOUR MINIMUM INTERNET", "id": "INTERNET OPERASIONAL"}, 
+            "hero.l3": {"en": "OPERATION BUDGET", "id": "MINIMUM ANDA"},
             "hero.tag": {"en": "— UNLIMITED INTERNET —", "id": "— INTERNET TANPA BATAS —"}, 
             "hero.p": {"en": "Reliable connectivity for critical mining operations beyond the limits of terrestrial infrastructure.", "id": "Konektivitas andal untuk operasi tambang kritis, melampaui batas infrastruktur terestrial."}, 
             "hero.cta": {"en": "Explore Solutions", "id": "Lihat Solusi"}, 
@@ -964,6 +991,10 @@
             "val.1": {"en": "LOW BUDGET.", "id": "BUDGET HEMAT."},
             "val.2": {"en": "BIG BANDWIDTH.", "id": "BANDWIDTH BESAR."},
             "val.3": {"en": "REMOTE SITE TO SITE IN ONE PACKAGE.", "id": "KONEKSI SITE-TO-SITE DALAM SATU PAKET."},
+            "val.4": {"en": "SPEED UP TO 200 Mbps", "id": "SPEED UP TO 200 Mbps"},
+            "stat.0": {"en": "We are experienced in managing over ", "id": "Kami berpengalaman menangani lebih dari "},
+            "stat.1": {"en": " users in mining areas and trusted by more than ", "id": " user dalam kawasan tambang dan dipercaya lebih dari "},
+            "stat.2": {"en": " large mining companies in Indonesia.", "id": " perusahaan tambang besar di Indonesia."},
             "intro.1": {"en": "CONNECTING", "id": "MENJANGKAU"}, 
             "intro.2": {"en": "THE", "id": "YANG"}, 
             "intro.3": {"en": "UNREACHABLE.", "id": "TERPENCIL."}, 
@@ -1035,7 +1066,7 @@
             "cta.b1": {"en": "Talk To Our Network Team", "id": "Hubungi Tim Jaringan Kami"}, 
             "foot.tag": {"en": "MINING CONNECTIVITY<br>UNLIMITED INTERNET", "id": "KONEKTIVITAS TAMBANG<br>INTERNET TANPA BATAS"}, 
             "foot.co": {"en": "Company", "id": "Perusahaan"}, 
-            "foot.soc": {"en": "Social", "id": "Sosial"}, 
+            "foot.soc": {"en": "Contact", "id": "Kontak"}, 
             "_title": {"en": "Internet Tambang — Mining Connectivity | Unlimited Internet", "id": "Internet Tambang — Konektivitas Tambang | Internet Tanpa Batas"}, 
             "_desc": {"en": "Connectivity solutions for mining operations through wireless, terrestrial, fiber optic, and satellite networks. Low Budget, Big Bandwidth.", "id": "Solusi konektivitas untuk operasi pertambangan melalui jaringan wireless, terrestrial, fiber optic, dan satellite. Budget hemat, bandwidth besar."}
         };
@@ -1122,7 +1153,7 @@
                     trigger: "#hero",
                     start: "top top",
                     end: "bottom top",
-                    scrub: true
+                     scrub: true
                 }
             });
 
